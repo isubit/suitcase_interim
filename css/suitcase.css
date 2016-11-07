@@ -1957,14 +1957,6 @@ html.js input.form-autocomplete {
 /*////////////////////////////////////*/
 /* Views */
 /* - People */
-.view-display-id-people_grid .view-content > h3 {
-    border: none;
-}
-
-.view-display-id-people_grid .view-content > h3:not(:first-child) {
-    margin-top: 32px;
-}
-
 .views-field.views-field-field-people-position {
     color: #6e6259;
 }
@@ -2586,3 +2578,20 @@ footer {
 .luggage-grid p {
     margin-top: 1em;
 }
+
+.luggage-grid .view-content > h3 {
+      border: none;
+}
+
+@media (min-width: 740px)
+.luggage-grid .view-content > h3 {
+      width: 99%;
+}
+
+.view-content > h3 {
+    color: #444;
+    font-weight: bold;
+    display: inline-block;
+    padding-right: 100px;
+}
+
