@@ -536,16 +536,30 @@ input[type="submit"] {
     min-width: 400px;
 }
 
+/*////////////////*/
+/* JP additional css for search form */
+
+.block-quick-links a, .block-quick-links a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    float: right;
+    margin-left: 8px;
+}
+
+.block-quick-links a:hover {
+    text-decoration: underline;
+}
+
+
+/*//////////////////*/
+/* JP End additional css for search form */
+
 @media all and (max-width: 900px) {
     #search-block-form { min-width: 200px; }
 }
 
-.region-search-inner .search-form-container.has-site-name-level-2 {
-    margin-top: 6px;
-}
-
-.region-search-inner .search-form-container.has-site-name-level-3 {
-    margin-top: 24px;
+@media all and (max-width: 740px) {
+    #search-block-form { margin-top: 20px; }
 }
 
 .page-search input#edit-keys,
