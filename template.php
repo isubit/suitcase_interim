@@ -125,3 +125,49 @@ function suitcase_interim_preprocess_panels_pane(&$variables) {
     unset($variables['attributes_array']['class']);
   }
 }
+
+/* Hero */
+
+function suitcase_interim_alpha_preprocess_zone(&$vars) {
+  if (strpos($vars['elements']['#zone'], 'hero') === 0) {
+    if (isset($vars['elements']['#grid'])) {
+      unset($vars['elements']['#grid']);
+    }
+    if (isset($vars['elements']['#grid_container'])) {
+      unset($vars['elements']['#grid_container']);
+    }
+  }
+}
+
+function suitcase_interim_alpha_preprocess_region(&$vars) {
+  if (strpos($vars['elements']['#region'], 'hero') === 0) {
+    $vars['content_attributes_array']['class'][] = 'region-hero-inner';
+    if (isset($vars['elements']['#grid'])) {
+      unset($vars['elements']['#grid']);
+    }
+    if (isset($vars['elements']['#grid_container'])) {
+      unset($vars['elements']['#grid_container']);
+    }
+  }
+}
+
+function suitcase_interim_preprocess_block(&$vars) {
+
+  if (isset($vars['block']->region) && strpos($vars['block']->region, 'hero') === 0) {
+
+    $vars['figure_image_url'] = $vars['block']->title;
+    $vars['figure_image_alt'] = $vars['content'];
+
+    $vars['figcaption_link_url'] = '#';
+
+    $block_info = module_invoke($vars['block']->module, 'block_info');
+
+    if (isset($block_info[$vars['block']->delta])) {
+      $vars['figcaption_link_url'] = $block_info[$vars['block']->delta]['info'];
+    }
+
+    $vars['figcaption_link_text'] = $vars['content'];
+
+  }
+
+}
