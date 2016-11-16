@@ -2535,3 +2535,66 @@ footer {
   font-size: 1em;
   color: #000;
 }
+
+/*----- Hero -----*/
+
+#zone-menu-wrapper + .zone-hero .region-hero,
+#zone-menu + .zone-hero .region-hero {
+    margin-top: -16px;
+}
+
+.region-hero {
+    padding-bottom: 16px;
+}
+
+.region-hero-inner {
+    border: none;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+    max-height: 50%;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.region-hero-inner-inner {
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.region-hero-inner-inner figure img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.region-hero-inner-inner figcaption a {
+    background: #888;
+    align-items: center;
+    z-index: 100;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 16px;
+    display: block;
+}
+
+.region-hero-inner-inner figcaption a,
+.region-hero-inner-inner figcaption a:link,
+.region-hero-inner-inner figcaption a:hover,
+.region-hero-inner-inner figcaption a:visited {
+    color: #FFF;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 900px) {
+    .region-hero-inner-inner figcaption a {
+        position: absolute;
+        bottom: 16px;
+        left: 16px;
+        background: rgba(0, 0, 0, .7);
+        padding: 16px;
+    }
+}
