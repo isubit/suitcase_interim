@@ -2589,6 +2589,10 @@ footer {
     text-decoration: none;
 }
 
+.region-hero-inner-inner figcaption a:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 900px) {
     .region-hero-inner-inner figcaption a {
         position: absolute;
