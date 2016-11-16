@@ -2602,3 +2602,15 @@ footer {
         padding: 16px;
     }
 }
+
+@media all and (max-width: 900px) {
+    .region-hero .container-12 {
+        margin: 0;
+        width: 100%;
+    }
+    .region-hero figcaption.grid-12 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
