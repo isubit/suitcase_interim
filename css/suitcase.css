@@ -2544,14 +2544,9 @@ footer {
 
 /*------- Grid for views -------*/
 
-.view-content > h3 {
+.luggage-grid .view-content > h3 {
     color: #444;
     font-weight: bold;
-    display: inline-block;
-    padding-right: 100px;
-}
-
-.luggage-grid .view-content > h3 {
     padding: 5px;
     font-size: 20px;
     display: block;
