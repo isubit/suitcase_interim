@@ -76,9 +76,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     '#description'   => t('The ISU nameplate identifies Iowa State University above the site name and department title.'),
     '#default_value' => variable_get('suitcase_interim_config_isu_nameplate_display', 1),
   );
-
   unset($form['theme_settings']);
-  unset($form['logo']);
   array_unshift($form['#submit'], 'suitcase_interim_config_form_submit');
 
 }
@@ -124,7 +122,27 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 }
 
 
+/**
+ * Determine if we are showing the level 2 (sometimes referred to the "department name")
+ */
+function _suitcase_interim_config_is_showing_this_header_level($level, $header_type=NULL) {
+  if (!$header_type)
+    $header_type = variable_get('suitcase_interim_config_header_type', NULL);
 
+  if (!$header_type) {
+    // Fail gracefully or raise an error?
+    return FALSE;
+  }
+  elseif ($level == 2) {
+    return in_array($header_type, array(1, 2));
+  }
+  elseif ($level == 3) {
+    return in_array($header_type, array(1, 3));
+  }
+  else {
+    return FALSE;
+  }
+}
 
 
 
