@@ -544,6 +544,22 @@ input[type="submit"] {
 @media all and (max-width: 900px) {
     #search-block-form { min-width: 200px; }
 }
+/* JP */
+@media all and (max-width: 740px) {
+    #search-block-form { margin-top: 20px; }
+}
+
+.block-quick-links a, .block-quick-links a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    float: right;
+    margin-left: 8px;
+}
+
+.block-quick-links a:hover {
+    text-decoration: underline;
+}
+/* /JP */
 
 .region-search-inner .search-form-container.has-site-name-level-2 {
     margin-top: 6px;

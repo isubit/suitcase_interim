@@ -71,19 +71,6 @@ function suitcase_interim_preprocess_region(&$vars) {
     $vars['site_name'] = variable_get('site_name');
     $vars['linked_site_name'] = l($vars['site_name'], '<front>', array('attributes' => array('title' => t('Home')), 'html' => TRUE));
   } 
-  elseif ($vars['region'] == 'search') {
-
-    $vars['site_name_level_2'] = variable_get('site_name');
-    $vars['site_name_level_3'] = variable_get('site_slogan');
-
-    // Levels to show
-    $vars['levels_to_show'] = variable_get('suitcase_interim_config_levels_to_show');
-
-    // The type of header that we need to output, default to show all
-    $vars['suitcase_interim_config_header_type'] = variable_get('suitcase_interim_config_header_type', 1);
-
-
-  } 
   elseif ($vars['region'] == 'secondary_menu') {
     $theme = alpha_get_theme();
     $vars['secondary_menu'] = $theme->page['secondary_menu'];
