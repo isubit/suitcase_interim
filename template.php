@@ -138,7 +138,11 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
 /* Menu List Theme Functions */
 
 /*
- * Clone of theme_links that also adds the active classes for query string matches
+ * Clone of theme_links that also adds the active classes for absolute url
+ * matches (including query string). This does not handle the case, which might
+ * be considered a core bug, where multiple menu items that link to the same
+ * page and differ only in query strings will both highlight upon visiting
+ * either of them.
  */
 function suitcase_interim_menu_links($variables)  {
 
