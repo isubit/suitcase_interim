@@ -89,7 +89,7 @@ h6 {
     font-size: 0.857em;
 }
 
-p, dl, table, blockquote, pre, .wd-Alert, .wd-Alert--info, .wd-Alert--warning, .wd-Alert--error, .wd-Alert--success, .notify-msg {
+p, dl, table, blockquote, pre, .notify-msg {
     margin-bottom: 16px;
 }
 
