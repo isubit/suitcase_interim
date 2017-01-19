@@ -953,6 +953,10 @@ nav.navigation .secondary-menu>li a.active-trail {
     width: calc(100% - 62px);
 }
 
+.page-search input#edit-keys {
+    width: calc(100% - 70px);
+}
+
 .form-item input[type=submit]:hover { background: #ffffff; }
 
 #search-block-form {
