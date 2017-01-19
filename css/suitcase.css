@@ -955,6 +955,7 @@ nav.navigation .secondary-menu>li a.active-trail {
 
 .page-search input#edit-keys {
     width: calc(100% - 70px);
+    padding: 10px;
 }
 
 .form-item input[type=submit]:hover { background: #ffffff; }
