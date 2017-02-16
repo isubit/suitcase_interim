@@ -1,4 +1,4 @@
-<p>Copyright &copy; <?php print date('Y'); ?>, Iowa State University of Science and Technology. All rights reserved.</p>
+<p>Copyright &copy; [current-date:custom:Y], Iowa State University of Science and Technology. All rights reserved.</p>
 <ul class="menu">
   <li class="first leaf">
     <a href="http://www.policy.iastate.edu/policy/discrimination">Non-discrimination Policy</a>
