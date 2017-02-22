@@ -77,9 +77,8 @@ a, a:link, a:visited { color: #cc0000; }
 a em, a:link em, a:hover em, a:visited em { color: inherit; }
 
 a:focus {
-    outline-style: solid;
-    outline-color: #F1BE48;
-    outline-width: 2px;
+    /* Simulating Chrome's default */
+    outline: #3b99fc auto 5px;
 }
 
 a > .fa { margin-right: 10px; }
@@ -278,10 +277,8 @@ input[type=text]:focus, textarea:focus {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    border: 1px solid #F1BE48;
-    outline-style: solid;
-    outline-color: #F1BE48;
-    outline-width: 1px;
+    /* Simulating Chrome's default */
+    outline: #3b99fc auto 5px;
 }
 
 input[type="password"] {
@@ -317,7 +314,7 @@ figure .insert-default-image-styling + figcaption {
 }
 
 a img:focus {
-    border: 2px #F1BE48;
+    outline: #eb99fc auto 5px;
 }
 
 /* CK Editor Enhanced Images */
@@ -465,7 +462,7 @@ figure.image.floated-right img { margin: 0; }
 #isu-menu-nav .sm ul a:focus,
 #isu-menu-nav .sm ul a:active,
 #isu-menu-nav .sm ul a.highlighted {
-    border: 2px #F1BE48;
+    outline: #3b99fc auto 5px;
 }
 
 #isu-menu-nav #isu-index-menu { float: left; }
