@@ -2102,6 +2102,20 @@ footer.submitted > span .placeholder {
 }
 
 /* -------------------- */
+/* ## CROPS NEWS 
+/* -------------------- */
+
+.zone-content .view-cropnews .views-row {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.views-row > .node-icm {
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
+/* -------------------- */
 /* ## FACETS TAGS
 /* -------------------- */
 
