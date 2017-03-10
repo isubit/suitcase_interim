@@ -1212,6 +1212,11 @@ a:hover > .fa-instagram {
     width: calc(100% - 62px);
 }
 
+.page-search input#edit-keys {
+    width: calc(100% - 70px);
+    padding: 10px;
+}
+
 .form-item input[type=submit]:hover { background: #ffffff; }
 
 #search-block-form {
