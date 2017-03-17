@@ -1181,6 +1181,11 @@ a:hover > .fa-instagram {
 /* ## REGION - SEARCH 
 /* -------------------- */
 
+region-search-inner input[type=text] {
+    border: none;
+    box-shadow: none;
+}
+
 .form-submit.transparent {
     background: transparent;
     border: 0;
@@ -2740,3 +2745,4 @@ table.responsive-table,
 .front-panel-row .panel-panel.grid-grow {
     flex-grow: 5;
 }
+
