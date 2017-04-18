@@ -296,6 +296,13 @@ input[type="submit"] {
     border-radius: 2px;
 }
 
+.region-search-inner input[type=text],
+.region-search-inner input[type=text]:focus,
+.region-search-inner textarea:focus {
+    border: none;
+    box-shadow: none;
+}
+
 /* Help Text */
 .filter-guidelines-wysiwyg .tips,
 .form-item .description {
@@ -1199,6 +1206,11 @@ a:hover > .fa-instagram {
 /* -------------------- */
 /* ## REGION - SEARCH 
 /* -------------------- */
+
+region-search-inner input[type=text] {
+    border: none;
+    box-shadow: none;
+}
 
 .form-submit.transparent {
     background: transparent;
@@ -2853,3 +2865,4 @@ table.responsive-table,
 .front-panel-row .panel-panel.grid-grow {
     flex-grow: 5;
 }
+
