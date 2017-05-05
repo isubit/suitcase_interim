@@ -17,6 +17,8 @@
     02. COMPONENTS
         a. Pagination
         b. Media Card
+        c. Icon Menus
+        d. Social Menus
     03. UTILITY
     04. GRID
     05. HEADER
@@ -271,6 +273,7 @@ a:hover {
 /* Exceptions */
 
 #section-content .pane-menu-menu-social a.external:after,
+#section-content .block-menu-social a:after,
 #section-content .view-resources a.external:after,
 #section-content .bibio-entry a.external:after {
     content: '';
@@ -615,6 +618,67 @@ input[type=submit].form-submit {
 .media-heading { 
     margin-top: 0; 
     margin-bottom: 0;
+}
+
+/* --- Icon Menus --- */
+
+.menu .fa {
+    margin-top: -0.15em;
+    margin-right: 0.5em;
+    font-size: 1.25em;
+    line-height: inherit;
+}
+
+.menu a > .fa:before {
+    /* to remove underline on link hover */
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* --- Social Menus --- */
+/* These can appear in blocks, 
+   footer blocks, and panels. 
+*/
+
+.block-menu-social .menu a,
+.pane-menu-menu-social a {
+    color: #333;
+    text-decoration: none;
+}
+
+.block-menu-social .menu a:hover .fa-facebook-official, 
+.pane-menu-menu-social .menu a:hover .fa-facebook-official {
+    color: #3b5998;
+}
+
+.block-menu-social .menu a:hover .fa-twitter-square,
+.pane-menu-menu-social .menu a:hover .fa-twitter-square {
+    color: #1da1f2;
+}
+
+.block-menu-social  .menu a:hover .fa-github-square, 
+.pane-menu-menu-social  .menu a:hover .fa-github-square {
+    color: #4078c0;
+}
+
+.block-menu-social  .menu a:hover .fa-pinterest-square,
+.pane-menu-menu-social  .menu a:hover .fa-pinterest-square {
+    color: #bd081c;
+}
+
+.block-menu-social .menu a:hover .fa-youtube-square,
+.pane-menu-menu-social .menu a:hover .fa-youtube-square {
+    color: #cd201f;
+}
+
+.block-menu-social .menu a:hover .fa-instagram,
+.pane-menu-menu-social .menu a:hover .fa-instagram {
+    color: #e1306c;
+}
+
+.block-menu-social  .menu a:hover .fa-rss-square,
+.pane-menu-menu-social  .menu a:hover .fa-rss-square {
+    color: #f77737;
 }
 
 /* -------------------- */
@@ -1160,52 +1224,7 @@ ul.tabs.secondary img {
         color: #006ba6;
     }
 
-/* Icon menus */
 
-.block-menu-social .menu a {
-    color: #333333;
-}
-
-.menu .fa {
-    margin-top: -0.15em;
-    margin-right: 0.5em;
-    font-size: 1.25em;
-    line-height: inherit;
-}
-
-.menu a > .fa:before {
-    /* to remove underline on link hover */
-    display: inline-block;
-    text-decoration: none;
-}
-
-.section-footer .menu a:hover .fa-facebook-official {
-    color: #3b5998;
-}
-
-.section-footer .menu a:hover .fa-twitter-square {
-    color: #1da1f2;
-}
-
-.section-footer .menu a:hover .fa-github-square {
-    color: #4078c0;
-}
-
-.section-footer .menu a:hover .fa-pinterest-square {
-    color: #bd081c;
-}
-
-.section-footer .menu a:hover .fa-youtube-square {
-    color: #cd201f;
-}
-
-.section-footer .menu a:hover .fa-instagram {
-    color: #e1306c;
-}
-
-.section-footer .menu a:hover .fa-rss-square {
-    color: #f77737;
-}
 
 /* ---------------------------------------- */
 /* ## HOME 
