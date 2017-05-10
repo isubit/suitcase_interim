@@ -47,14 +47,14 @@
                 <li><a href="http://www.fpm.iastate.edu/maps/">Maps</a></li>
                 <li><a href="http://web.iastate.edu/safety/">Safety</a></li>
                 <li data-sm-reverse="true">
-                    <a href="https://www.it.iastate.edu/signons/">Sign Ons</a>
+                    <a href="http://web.iastate.edu/signons">Sign Ons</a>
                     <ul>
                         <li><a href="http://accessplus.iastate.edu/">AccessPlus</a></li>
                         <li><a href="http://bb.its.iastate.edu/">Blackboard</a></li>
                         <li><a href="http://iastate.box.com/">CyBox</a></li>
                         <li><a href="http://cymail.iastate.edu/">CyMail</a></li>
                         <li><a href="http://outlook.iastate.edu/">Outlook</a></li>
-                        <li><a href="https://www.it.iastate.edu/signons/">More Sign Ons...</a></li>
+                        <li><a href="http://web.iastate.edu/signons">More Sign Ons...</a></li>
                     </ul>
                 </li>
             </ul>
