@@ -54,7 +54,7 @@
                         <li><a href="http://iastate.box.com/">CyBox</a></li>
                         <li><a href="http://cymail.iastate.edu/">CyMail</a></li>
                         <li><a href="http://outlook.iastate.edu/">Outlook</a></li>
-                        <li><a href="https://www.it.iastate.edu/signons/">More Sign Ons...</a></li>
+                        <li><a href="http://web.iastate.edu/signons">More Sign Ons...</a></li>
                     </ul>
                 </li>
             </ul>
