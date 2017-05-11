@@ -364,6 +364,14 @@ ol,
     border-right: 0;
 }
 
+/* --- Views Tables --- */
+
+.views-table img {
+    /* Prevents images from shrinking to nothing
+       when tables are very wide */
+    max-width: none;
+}
+
 /* -------------------- */
 /* Blockquotes */
 
@@ -1874,6 +1882,21 @@ table.responsive-table,
 
 .responsive-table th {
     background-color: #eee;
+}
+
+/* Images in responsive tables */
+
+.responsive-table img {
+    height: auto !important;
+}
+
+@media (min-width: 801px) {
+
+    .responsive-table img {
+        /* Prevents images from shrinking to nothing 
+           before responsive table-breaking kicks in. */
+        max-width: none;
+    }
 }
 
 /* -------------------- */
