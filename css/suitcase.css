@@ -1,5 +1,3 @@
-/* TESTING VERSION 3.3 */
-
 /* ---------------------------------------- */
 /* ## Table of Contents 
 /* ---------------------------------------- */
@@ -549,7 +547,8 @@ input[type=submit].form-submit {
 /* ## COMPONENTS 
 /* -------------------- */
 
-/* --- Pagination --- */
+/* -------------------- */
+/* Pagination */
 
 .item-list .pager {
     display: flex;
@@ -601,7 +600,8 @@ input[type=submit].form-submit {
     background: #ddd;
 }
 
-/* --- Media Card --- */
+/* -------------------- */
+/* Media Card */
 
 .media {
     /* Overrides blog_blog.css */
@@ -628,7 +628,8 @@ input[type=submit].form-submit {
     margin-bottom: 0;
 }
 
-/* --- Icon Menus --- */
+/* -------------------- */
+/* Icon Menus */
 
 .menu .fa {
     margin-top: -0.15em;
@@ -643,7 +644,8 @@ input[type=submit].form-submit {
     text-decoration: none;
 }
 
-/* --- Social Menus --- */
+/* -------------------- */
+/* Social Menus */
 /* These can appear in blocks, 
    footer blocks, and panels. 
 */
@@ -692,8 +694,6 @@ input[type=submit].form-submit {
 /* -------------------- */
 /* ## UTILITY 
 /* -------------------- */
-
-
 
 /* -------------------- */
 /* ## GRID
@@ -1313,7 +1313,7 @@ ul.tabs.secondary img {
     padding: 0 1rem;
 }
 
-/* .panel-pane-overflow must be set
+/* .panel-pane-overflow must be applied
 in the panel settings */ 
 
 .panel-pane-overflow .pane-content, 
@@ -1416,12 +1416,12 @@ in the panel settings */
     margin-left: -0.5rem;
 }
 
-@media (max-width: 740px) {
-    .front-panel-row {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
+    @media (max-width: 740px) {
+        .front-panel-row {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
     }
-}
 
 .front-panel-row .panel-panel.grid-3 {
     flex: 1 1 250px;
@@ -1756,7 +1756,6 @@ ul.menu li {
     overflow: hidden;
 }
 
-
 /* Field Name: Field Tags */
 /* Field Name: Field Category */
 
@@ -1900,8 +1899,8 @@ table.responsive-table,
 }
 
 /* -------------------- */
-/* NO JS
-/* -------------------- */
+/* If javascript is not enabled */
+
     
     .field-items table {
         display: block;
@@ -1939,10 +1938,9 @@ table.responsive-table,
 }
 
 @media (max-width: 800px) {
-    
+
 /* -------------------- */
-/* NONE
-/* -------------------- */
+/* No headers (none) */
     
     .responsive-table.table-none { display: table; min-width: 75%; }
     
@@ -1956,8 +1954,7 @@ table.responsive-table,
     .responsive-table.table-none td:last-of-type { border-bottom: none; }
 
 /* -------------------- */
-/* FIRST ROW
-/* -------------------- */
+/* Headers in first row */
     
     .responsive-table.table-row { display: table; min-width: 75%; }
     
@@ -1994,10 +1991,9 @@ table.responsive-table,
     }
     
     .table-row tr { border-bottom: 3px solid #bbb; }
-        
+
 /* -------------------- */
-/* FIRST COL
-/* -------------------- */
+/* Headers in first column */
     
     .responsive-table.table-col { display: table; min-width: 75%; }
     
@@ -2018,10 +2014,9 @@ table.responsive-table,
     }
     
     .responsive-table.table-col td:last-of-type { border-bottom: none; }
-    
+
 /* -------------------- */
-/* BOTH
-/* -------------------- */
+/* Headers in both first row and first column */
     
     .responsive-table.table-both { display: table; min-width: 75%; }
     
@@ -2193,7 +2188,7 @@ h2.node-title {
 
 /* --- Events Pagination --- */
 
-/* Hard override of module */
+/* Override of module */
 .view .date-nav-wrapper .date-prev,
 .view .date-nav-wrapper .date-next {
     position: static;
@@ -2376,6 +2371,7 @@ td.views-field-field-resource-screenshot img {
 /* --- Book Navigation --- */
 
 /* Bottom */
+
 .book-navigation .menu li a {
     display: block;
     margin-bottom: 0.5rem;
@@ -2514,7 +2510,8 @@ td.views-field-field-resource-screenshot img {
     padding-right: 1.5rem;
 }
 
-/* --- Form Element Tables --- */
+/* -------------------- */
+/* Form Element Tables */
 
 .node-form .field-multiple-table th.field-label {
     padding: 0.5rem 0.75rem;
@@ -2546,7 +2543,8 @@ a.tabledrag-handle .handle {
     margin-right: 0.25rem;
 }
 
-/* --- Images/Files --- */
+/* -------------------- */
+/* Images/Files */
 
 .file .file-icon {
     position: relative;
@@ -2559,7 +2557,8 @@ a.tabledrag-handle .handle {
     margin-right: 0.25rem;
 }
 
-/* --- Text Format --- */
+/* -------------------- */
+/* Text Format */
 
 .filter-help {
     float: none;
@@ -2587,7 +2586,8 @@ a.tabledrag-handle .handle {
     padding: 0;
 }
 
-/* --- Vertical Tabs --- */
+/* -------------------- */
+/* Vertical Tabs */
 
 .vertical-tabs ul.vertical-tabs-list .summary {
     color: #333;
