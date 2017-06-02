@@ -255,13 +255,49 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
       menu_save($menu);
 
-      $item = array(
-        'link_title' => 'Facebook',
-        'link_path' => 'https://www.facebook.com/',
-        'menu_name' => 'menu-social',
+      $links = array(
+        array(
+          'link_title' => 'Facebook',
+          'link_path' => 'https://www.facebook.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 0,
+        ),
+        array(
+          'link_title' => 'Twitter',
+          'link_path' => 'https://www.twitter.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 1,
+        ),
+        array(
+          'link_title' => 'Instagram',
+          'link_path' => 'https://www.instagram.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 2,
+        ),
+        array(
+          'link_title' => 'Youtube',
+          'link_path' => 'https://www.youtube.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 3,
+        ),
+        array(
+          'link_title' => 'RSS',
+          'link_path' => 'https://en.wikipedia.org/wiki/rss',
+          'menu_name' => 'menu-social',
+          'weight' => 4,
+        ),
       );
 
-      menu_link_save($item);
+      $item = '';
+      foreach ($links as $link) {
+        $item = array(
+          'link_path' => $link['link_path'],
+          'link_title' => $link['link_title'],
+          'menu_name' => $link['menu_name'],
+          'weight' => $link['weight'],
+        );
+        menu_link_save($item);
+      }
 
       db_insert('block')->fields(array(
         'module' => 'menu',
@@ -269,7 +305,7 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
         'theme' => 'suitcase_interim',
         'status' => 1,
         'weight' => '-28',
-        'region' => 'footer_fourth',
+        'region' => 'footer_third',
         'visibility' => BLOCK_VISIBILITY_NOTLISTED,
         'pages' => '',
         'title' => '<none>',
