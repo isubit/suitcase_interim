@@ -1283,6 +1283,15 @@ ul.tabs.secondary img {
     z-index: 2;
 }
 
+.flex-control-paging li a {
+    color: #ffffff;
+    background: #616161;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #cc0000;
+}
+
 /* ---------------------------------------- */
 /* ## PANELS 
 /* ---------------------------------------- */
