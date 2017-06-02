@@ -1292,6 +1292,10 @@ ul.tabs.secondary img {
     background: #cc0000;
 }
 
+.flex-pauseplay a {
+    line-height: 20px;
+}
+
 /* ---------------------------------------- */
 /* ## PANELS 
 /* ---------------------------------------- */
