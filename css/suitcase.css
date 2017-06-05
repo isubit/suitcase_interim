@@ -692,6 +692,104 @@ input[type=submit].form-submit {
 }
 
 /* -------------------- */
+/* Image link blocks */
+
+/* --- Image with link below --- */
+
+.image-link a {
+    display: block;
+    color: #ffffff;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.image-link a:hover {
+    box-shadow: 0 0 5px 1px #7a99ac;
+}
+
+.image-link img {
+    width: 100%;
+}
+
+.image-link h2,
+.image-link p {
+    margin: 0;
+    padding: 0.75rem;
+    line-height: 1.25;
+    font-weight: normal;
+    text-align: center;
+    background: #cc0000;
+}
+
+.image-link i {
+    margin-right: 0.5rem;
+}
+
+.image-link.link-red h2,
+.image-link.link-red p { background: #cc0000; }
+
+.image-link.link-blue h2,
+.image-link.link-blue p { background: #006ba6; }
+
+.image-link.link-green h2,
+.image-link.link-green p { background: #76881d; }
+
+.image-link.link-dark-red h2,
+.image-link.link-dark-red p { background: #7c2529; }
+
+.image-link.link-dark-blue h2,
+.image-link.link-dark-blue p { background: #003D4C; }
+
+.image-link.link-dark-green h2,
+.image-link.link-dark-green p { background: #3E4827; }
+
+/* --- Image with link overlay --- */
+
+.image-overlay a {
+    display: block;
+    position: relative;
+    color: #ffffff;
+    line-height: 0;
+    text-decoration: none;
+}
+
+.image-overlay a:hover {
+    box-shadow: 0 0 5px 1px #7a99ac;
+}
+
+.image-overlayimg {
+    width: 100%;
+}
+
+.image-overlay h2,
+.image-overlay p {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    width: auto;
+    max-width: 90%;
+    margin: 0;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    font-weight: normal;
+    text-align: right;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.image-overlay.overlay-full h2,
+.image-overlay.overlay-full p {
+    bottom: 0;
+    width: 100%;
+    max-width: none;
+    text-align: left;
+}
+
+.image-overlay i {
+    margin-right: 0.5rem;
+}
+
+
+/* -------------------- */
 /* ## UTILITY 
 /* -------------------- */
 
