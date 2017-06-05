@@ -80,8 +80,8 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_1_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Wordmark URL'),
-      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to \'http://www.iastate.edu/\''),
-      '#default_value' => variable_get('suitcase_interim_config_level_1_url', 'http://www.iastate.edu/'),
+      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to site\'s homepage.'),
+      '#default_value' => variable_get('suitcase_interim_config_level_1_url', $GLOBALS['base_url']),
       '#weight' => 2,
     );
 
