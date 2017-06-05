@@ -1245,6 +1245,7 @@ ul.tabs.secondary img {
 .flexslider {
     margin: 0;
     border: 0;
+    box-shadow: none;
 }
 
 .flexslider img { height: 100%; }
@@ -1280,6 +1281,19 @@ ul.tabs.secondary img {
     position: static;
     margin-top: 1rem;
     z-index: 2;
+}
+
+.flex-control-paging li a {
+    color: #ffffff;
+    background: #616161;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #cc0000;
+}
+
+.flex-pauseplay a {
+    line-height: 20px;
 }
 
 /* ---------------------------------------- */
