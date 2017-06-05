@@ -36,13 +36,6 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#description' => '',
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_isu_nameplate_display'] = array(
-      '#type' => 'checkbox',
-      '#title' => t('Show Wordmark'),
-      '#description' => t('The wordmark appears above the department title and site name.'),
-      '#default_value' => variable_get('suitcase_interim_config_isu_nameplate_display', 1),
-    );
-
     unset($form['logo']);
 
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['default_logo'] = array(
@@ -77,52 +70,52 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#description' => t("Upload your logo file to use instead of the ISU wordmark.")
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_1_url'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Wordmark URL'),
-      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to \'http://www.iastate.edu/\''),
-      '#default_value' => variable_get('suitcase_interim_config_level_1_url', 'http://www.iastate.edu/'),
-      '#weight' => 2,
-    );
-
-    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2_url'] = array(
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_1'] = array(
       '#type' => 'hidden',
       '#attributes' => array(
-        'id' => 'edit-dept-url',
+        'id' => 'edit-level-1',
       ),
-      '#title' => t('Level 2 URL'),
-      '#description' => t('Full URL to the Department site'),
-      '#default_value' => variable_get('suitcase_interim_config_level_2_url', NULL),
+      '#default_value' => variable_get('suitcase_interim_config_level_1', NULL),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_1_url'] = array(
+      '#type' => 'hidden',
+      '#attributes' => array(
+        'id' => 'edit-level-1-url',
+      ),
+      '#default_value' => variable_get('suitcase_interim_config_level_1_url', NULL),
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2'] = array(
       '#type' => 'hidden',
       '#attributes' => array(
-        'id' => 'edit-site-name',
+        'id' => 'edit-level-2',
       ),
-      '#title' => t('Level 2 (Department, College, or Consortium)'),
-      '#description' => t('Displays under the wordmark & defaults to "Iowa State University"'),
       '#default_value' => variable_get('suitcase_interim_config_level_2', NULL),
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2_url'] = array(
+      '#type' => 'hidden',
+      '#attributes' => array(
+        'id' => 'edit-level-2-url',
+      ),
+      '#default_value' => variable_get('suitcase_interim_config_level_2_url', NULL),
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_3'] = array(
       '#type' => 'hidden',
       '#attributes' => array(
-        'id' => 'edit-site-slogan',
+        'id' => 'edit-level-3',
       ),
-      '#title' => t('Level 3 (Lab or Entity name)'),
-      '#description' => t('Displays under the Level 2 text'),
       '#default_value' => variable_get('suitcase_interim_config_level_3', NULL),
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_header_type']= array(
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_3_url'] = array(
       '#type' => 'hidden',
       '#attributes' => array(
-        'id' => 'edit-header-type',
+        'id' => 'edit-level-3-url',
       ),
-      '#title' => t('Header type'),
-      '#description' => t('The type of header to display'),
-      '#default_value' => variable_get('suitcase_interim_config_header_type', 1),
+      '#default_value' => variable_get('suitcase_interim_config_level_3_url', NULL),
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_advanced_settings'] = array(
@@ -156,37 +149,31 @@ function suitcase_interim_config_form_pre_render($element) {
 
 function suitcase_interim_config_form_submit($form, &$form_state) {
 
+  $suitcase_interim_config_level_1 = $form_state['values']['suitcase_interim_config_level_1'];
+  variable_set('suitcase_interim_config_level_1', $suitcase_interim_config_level_1);
   variable_set('suitcase_interim_config_level_1_url', $form_state['values']['suitcase_interim_config_level_1_url']);
 
-  variable_set('suitcase_interim_config_level_2_url', $form_state['values']['suitcase_interim_config_level_2_url']);
-
-  // Level 2
   $suitcase_interim_config_level_2 = $form_state['values']['suitcase_interim_config_level_2'];
   variable_set('suitcase_interim_config_level_2', $suitcase_interim_config_level_2);
+  variable_set('suitcase_interim_config_level_2_url', $form_state['values']['suitcase_interim_config_level_2_url']);
 
-  // Level 3
   $suitcase_interim_config_level_3 = $form_state['values']['suitcase_interim_config_level_3'];
   variable_set('suitcase_interim_config_level_3', $suitcase_interim_config_level_3);
+  variable_set('suitcase_interim_config_level_3_url', $form_state['values']['suitcase_interim_config_level_3_url']);
 
-  // Type of header
-  $header_type = $form_state['values']['suitcase_interim_config_header_type'];
-  variable_set('suitcase_interim_config_header_type', $header_type);
-
-  variable_set('suitcase_interim_config_isu_nameplate_display', $form_state['values']['suitcase_interim_config_isu_nameplate_display']);
 
   variable_set('suitcase_interim_config_show_advanced_settings', $form_state['values']['suitcase_interim_config_show_advanced_settings']);
 
   // Decide which level the site name should be set to
   $site_name = NULL;
-  if (_suitcase_interim_config_is_showing_this_header_level(3, $header_type)) {
+  if (!empty($suitcase_interim_config_level_3)) {
     $site_name = $suitcase_interim_config_level_3;
   }
-  elseif (_suitcase_interim_config_is_showing_this_header_level(2, $header_type)) {
+  elseif (!empty($suitcase_interim_config_level_2)) {
     $site_name = $suitcase_interim_config_level_2;
   }
-
-  if (!$site_name) {
-    $site_name = 'Iowa State University';
+  else {
+    $site_name = $suitcase_interim_config_level_1;
   }
 
   variable_set('site_name', $site_name);
@@ -280,27 +267,4 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
   }
 
-}
-
-
-/**
- * Determine if we are showing the level 2 (sometimes referred to the "department name")
- */
-function _suitcase_interim_config_is_showing_this_header_level($level, $header_type=NULL) {
-  if (!$header_type)
-    $header_type = variable_get('suitcase_interim_config_header_type', NULL);
-
-  if (!$header_type) {
-    // Fail gracefully or raise an error?
-    return FALSE;
-  }
-  elseif ($level == 2) {
-    return in_array($header_type, array(1, 2));
-  }
-  elseif ($level == 3) {
-    return in_array($header_type, array(1, 3));
-  }
-  else {
-    return FALSE;
-  }
 }
