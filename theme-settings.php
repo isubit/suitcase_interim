@@ -193,7 +193,16 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
   // Populate empty theme regions with default content blocks if provided
 
-  if (module_exists('block') && filter_format_exists('full_html')) {
+  if (module_exists('block')) {
+
+    if (!filter_format_exists('suitcase_interim_block')) {
+      $suitcase_interim_block_format = array(
+        'format' => 'suitcase_interim_block',
+        'name' => 'Suitcase Interim Block',
+      );
+      $suitcase_interim_block_format = (object) $suitcase_interim_block_format;
+      filter_format_save($suitcase_interim_block_format);
+    }
 
     module_load_include('inc', 'block', 'block.admin');
 
@@ -223,7 +232,7 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
           'info' => $block_name,
           'body' => array(
             'value' => theme_render_template($block_template_file->uri, array()),
-            'format' => 'full_html',
+            'format' => 'suitcase_interim_block',
           ),
           'regions' => array(
             'suitcase_interim' => $region_name,
