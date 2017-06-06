@@ -2173,6 +2173,12 @@ table.responsive-table,
     }
 }
 
+/* --- Views Tables - Overflow --- */
+/* Add this class to table Views */
+
+.views-table-overflow .view-content {
+    overflow-x: auto;
+}
 
 /* ---------------------------------------- */
 /* ## SEARCH 
