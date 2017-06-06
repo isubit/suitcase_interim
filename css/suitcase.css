@@ -1678,6 +1678,15 @@ h2.block-title {
     border-color: #ddd;
 }
 
+.block-facetapi .item-list li.expanded {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+.block-facetapi .item-list li.expanded a {
+    margin-bottom: 0.25rem;
+}
+
 /* -------------------- */
 /* Just Tags */
 
