@@ -807,6 +807,13 @@ input[type=submit].form-submit {
     padding: 0.5rem;
 }
 
+.luggage-gridrow img,
+.luggage-gridrow3 img,
+.luggage-gridrow4 img {
+    float: left;
+    padding: 0 1rem 1rem 0;
+}
+
 .luggage-gridrow,
 .luggage-gridrow3,
 .luggage-gridrow4 {
