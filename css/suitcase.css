@@ -2380,14 +2380,6 @@ h2.node-title {
     clear: both;
 }
 
-.node-people .field-label-inline .field-label:after,
-.node-people .field-label-above .field-label:after,
-.node-people fieldset.group-contact:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
 /* -------------------- */
 /* ## RESOURCES 
 /* -------------------- */
