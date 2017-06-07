@@ -808,6 +808,13 @@ input[type=submit].form-submit {
     padding: 0.5rem;
 }
 
+.luggage-gridrow img,
+.luggage-gridrow3 img,
+.luggage-gridrow4 img {
+    float: left;
+    padding: 0 1rem 1rem 0;
+}
+
 .luggage-gridrow,
 .luggage-gridrow3,
 .luggage-gridrow4 {
@@ -2351,11 +2358,6 @@ h2.node-title {
 
 .view-display-id-people_grid .views-field-title span a {
     font-size: inherit;
-}
-
-.views-field-field-people-image {
-    margin-right: 1em;
-    float: left;
 }
 
 .views-field.views-field-field-people-position {
