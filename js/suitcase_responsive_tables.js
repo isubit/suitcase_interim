@@ -2,8 +2,8 @@
 
 $(document).ready(function() {
 	
-	// Just tables in content
-	var table = $('.field-items table');
+	// Find tables in content, or Views tables with the .views-table-responsive class
+	var table = $('.field-items table, .views-table-responsive table');
 	
 /* --------------------- 
 First, check the table 

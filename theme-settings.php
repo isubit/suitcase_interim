@@ -80,8 +80,8 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_1_url'] = array(
       '#type' => 'textfield',
       '#title' => t('Wordmark URL'),
-      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to \'http://www.iastate.edu/\''),
-      '#default_value' => variable_get('suitcase_interim_config_level_1_url', 'http://www.iastate.edu/'),
+      '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to site\'s homepage.'),
+      '#default_value' => variable_get('suitcase_interim_config_level_1_url', $GLOBALS['base_url']),
       '#weight' => 2,
     );
 
@@ -193,7 +193,16 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
   // Populate empty theme regions with default content blocks if provided
 
-  if (module_exists('block') && filter_format_exists('full_html')) {
+  if (module_exists('block')) {
+
+    if (!filter_format_exists('suitcase_interim_block')) {
+      $suitcase_interim_block_format = array(
+        'format' => 'suitcase_interim_block',
+        'name' => 'Suitcase Interim Block',
+      );
+      $suitcase_interim_block_format = (object) $suitcase_interim_block_format;
+      filter_format_save($suitcase_interim_block_format);
+    }
 
     module_load_include('inc', 'block', 'block.admin');
 
@@ -223,7 +232,7 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
           'info' => $block_name,
           'body' => array(
             'value' => theme_render_template($block_template_file->uri, array()),
-            'format' => 'full_html',
+            'format' => 'suitcase_interim_block',
           ),
           'regions' => array(
             'suitcase_interim' => $region_name,
@@ -255,13 +264,49 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
       menu_save($menu);
 
-      $item = array(
-        'link_title' => 'Facebook',
-        'link_path' => 'https://www.facebook.com/',
-        'menu_name' => 'menu-social',
+      $links = array(
+        array(
+          'link_title' => 'Facebook',
+          'link_path' => 'https://www.facebook.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 0,
+        ),
+        array(
+          'link_title' => 'Twitter',
+          'link_path' => 'https://www.twitter.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 1,
+        ),
+        array(
+          'link_title' => 'Instagram',
+          'link_path' => 'https://www.instagram.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 2,
+        ),
+        array(
+          'link_title' => 'Youtube',
+          'link_path' => 'https://www.youtube.com/',
+          'menu_name' => 'menu-social',
+          'weight' => 3,
+        ),
+        array(
+          'link_title' => 'RSS',
+          'link_path' => 'https://en.wikipedia.org/wiki/rss',
+          'menu_name' => 'menu-social',
+          'weight' => 4,
+        ),
       );
 
-      menu_link_save($item);
+      $item = '';
+      foreach ($links as $link) {
+        $item = array(
+          'link_path' => $link['link_path'],
+          'link_title' => $link['link_title'],
+          'menu_name' => $link['menu_name'],
+          'weight' => $link['weight'],
+        );
+        menu_link_save($item);
+      }
 
       db_insert('block')->fields(array(
         'module' => 'menu',
@@ -269,7 +314,7 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
         'theme' => 'suitcase_interim',
         'status' => 1,
         'weight' => '-28',
-        'region' => 'footer_fourth',
+        'region' => 'footer_third',
         'visibility' => BLOCK_VISIBILITY_NOTLISTED,
         'pages' => '',
         'title' => '<none>',
