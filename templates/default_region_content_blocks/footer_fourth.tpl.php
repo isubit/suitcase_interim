@@ -7,6 +7,6 @@
     <a href="http://www.policy.iastate.edu/electronicprivacy">Privacy Policy</a>
   </li>
   <li class="last leaf">
-    <a href="http://digitalaccess.iastate.edu">Digital Access &amp; Accessibility</a>
+    <a href="https://www.digitalaccess.iastate.edu">Digital Access &amp; Accessibility</a>
   </li>
 </ul>
