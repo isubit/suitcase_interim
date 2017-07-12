@@ -307,6 +307,12 @@ ol,
 /* -------------------- */
 /* Tables */
 
+tr.even,
+tr.odd {
+    /* Overrides system.theme */
+    padding: inherit;
+}
+
 .content table {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -829,19 +835,19 @@ input[type=submit].form-submit {
     .luggage-gridrow,
     .luggage-gridrow3,
     .luggage-gridrow4 {
-        flex-basis: 48.6%;
+        flex-basis: calc(50% - 51px);
         min-width: 48.6%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     .luggage-gridrow3 {
-        flex-basis: 31.3%;
+        flex-basis: calc(33% - 51px);
         min-width: 31.3%;
     }
 
     .luggage-gridrow4 {
-        flex-basis: 23.5%;
+        flex-basis: calc(25% - 51px);
         min-width: 23.5%;
     }
 
