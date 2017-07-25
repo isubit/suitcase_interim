@@ -1812,6 +1812,12 @@ aside.region {
     border: 1px solid #dddddd;
 }
 
+/* But no padding or border in the Views Accordion */
+.ui-accordion .views-row {
+    padding: 0;
+    border: 0;
+}
+
 /* --- .item-list --- */
 
 .item-list ul {
