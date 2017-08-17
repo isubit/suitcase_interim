@@ -1869,6 +1869,12 @@ ul.menu li {
     position: relative;
 }
 
+/* In views */
+.view-content article {
+    /* Contain absolute positioned indicator */
+    position: relative;
+}
+
 /* -------------------- */
 /* ## FIELDS & LABELS 
 /* -------------------- */
@@ -2268,6 +2274,8 @@ table.responsive-table,
 
 h2.node-title {
     margin-top: 0;
+    /* To steer clear of content type indicators */
+    padding-top: 1.5rem;
 }
 
 .node .field-name-field-category {
