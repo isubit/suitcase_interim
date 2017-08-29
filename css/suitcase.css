@@ -440,7 +440,7 @@ img {
 
 /* Target only images in content */
 .field-name-body img {
-    height: auto;
+    height: auto !important;
     max-width: calc(100% - 1rem);
     margin: 0.5rem;
 }
@@ -1812,6 +1812,12 @@ aside.region {
     border: 1px solid #dddddd;
 }
 
+/* But no padding or border in the Views Accordion */
+.ui-accordion .views-row {
+    padding: 0;
+    border: 0;
+}
+
 /* --- .item-list --- */
 
 .item-list ul {
@@ -1859,6 +1865,12 @@ ul.menu li {
 /* In search */
 
 .page-search article {
+    /* Contain absolute positioned indicator */
+    position: relative;
+}
+
+/* In views */
+.view-content article {
     /* Contain absolute positioned indicator */
     position: relative;
 }
@@ -2262,6 +2274,8 @@ table.responsive-table,
 
 h2.node-title {
     margin-top: 0;
+    /* To steer clear of content type indicators */
+    padding-top: 1.5rem;
 }
 
 .node .field-name-field-category {
@@ -2633,7 +2647,6 @@ td.views-field-field-resource-screenshot img {
     height: auto !important;
     margin-top: 0.5rem !important;
     padding: 0.5rem;
-    padding-right: 1.15rem;
     font-size: 1rem;
 }
 

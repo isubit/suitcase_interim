@@ -348,7 +348,8 @@ function suitcase_interim_menu_link__menu_social($variables) {
     'instagram' => 'fa-instagram',
     'pinterest' => 'fa-pinterest-square',
     'github' => 'fa-github-square',
-    'rss' => 'fa-rss-square'
+    'rss' => 'fa-rss-square',
+    'snapchat' => 'fa-snapchat-square'
   );
 
   $font_awesome_icon = '';
