@@ -2346,9 +2346,9 @@ h2.node-title {
     background: #006ba6;
 }
 
-.multi-day .calendar.monthview a,
-.multi-day .calendar.weekview a,
-.multi-day .calendar.dayview a {
+td.multi-day .calendar.monthview a,
+td.multi-day .calendar.weekview a,
+td.multi-day .calendar.dayview a {
     color: #fff;
 }
 
