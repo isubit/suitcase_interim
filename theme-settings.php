@@ -85,6 +85,14 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#weight' => 2,
     );
 
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['suitcase_interim_config_isu_nameplate_alt_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Wordmark Alt Text'),
+      '#description' => t('Alt text for the site\'s wordmark. Defaults to Iowa State University.'),
+      '#default_value' => variable_get('suitcase_interim_config_isu_nameplate_alt_text', 'Iowa State University'),
+      '#weight' => 3,
+    );
+
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2_url'] = array(
       '#type' => 'hidden',
       '#attributes' => array(
@@ -173,6 +181,8 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
   variable_set('suitcase_interim_config_header_type', $header_type);
 
   variable_set('suitcase_interim_config_isu_nameplate_display', $form_state['values']['suitcase_interim_config_isu_nameplate_display']);
+
+  variable_set('suitcase_interim_config_isu_nameplate_alt_text', $form_state['values']['suitcase_interim_config_isu_nameplate_alt_text']);
 
   variable_set('suitcase_interim_config_show_advanced_settings', $form_state['values']['suitcase_interim_config_show_advanced_settings']);
 
