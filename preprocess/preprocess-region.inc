@@ -18,6 +18,7 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
 
     // Get the level 1 url
     $vars['level_1_url'] = variable_get('suitcase_interim_config_level_1_url');
+    $vars['wordmark_alt_text'] = variable_get('suitcase_interim_config_isu_nameplate_alt_text');
 
     $vars['suitcase_interim_config_level_2_url'] = variable_get('suitcase_interim_config_level_2_url');
 
