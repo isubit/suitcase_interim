@@ -6,7 +6,7 @@
             <?php if (theme_get_setting('default_logo')): ?>
               <a id="isu_header_wordmark" href="<?php print $level_1_url; ?>" title="Iowa State University Homepage"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University"></a>
             <?php else: ?>
-              <a id="isu_header_wordmark" href="<?php print $level_1_url; ?>" title="<?php print $site_name; ?>"><img src="<?php print $wordmark_image; ?>" alt="Iowa State University - <?php print $site_name; ?>"></a>
+              <a id="isu_header_wordmark" href="<?php print $level_1_url; ?>" title="<?php print $site_name; ?>"><img src="<?php print $wordmark_image; ?>" alt="<?php print $site_name; ?>"></a>
             <?php endif; ?>
         <?php endif; ?>
 
