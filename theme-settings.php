@@ -48,7 +48,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['default_logo'] = array(
       '#type' => 'checkbox',
       '#title' => t('Use the default ISU wordmark'),
-      '#default_value' => theme_get_setting('default_logo', 'suitcase_interim'),
+      '#default_value' => theme_get_setting('default_logo'),
       '#tree' => FALSE,
       '#description' => t('Check here if you want to use the default ISU wordmark.')
     );
@@ -67,7 +67,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#type' => 'textfield',
       '#title' => t('Path to custom wordmark'),
       '#description' => t('The path to the file you would like to use as your logo file instead of the ISU wordmark.'),
-      '#default_value' => theme_get_setting('logo_path', 'suitcase_interim'),
+      '#default_value' => theme_get_setting('logo_path'),
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['logo_upload'] = array(

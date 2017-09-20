@@ -5,7 +5,7 @@
  */
 ?>
 <div id="suitcase-interim-header-preview">
-  <?php $wordmark_path = (theme_get_setting('default_logo', 'suitcase_interim')) ? file_create_url(drupal_get_path('theme', 'suitcase_interim') . '/images/isu.svg') : file_create_url(theme_get_setting('logo_path', 'suitcase_interim')); ?>
+  <?php $wordmark_path = (theme_get_setting('default_logo', variable_get('theme_default'))) ? file_create_url(drupal_get_path('theme', 'suitcase_interim') . '/images/isu.svg') : file_create_url(theme_get_setting('logo_path', variable_get('theme_default'))); ?>
   <div class="container-12 clearfix">
     <div class="grid-6 suitcase-interim-vertical-tabs clearfix">
       <ul class="suitcase-interim-vertical-tabs-list">
