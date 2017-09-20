@@ -85,7 +85,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#weight' => 2,
     );
 
-    $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_isu_nameplate_alt_text'] = array(
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['suitcase_interim_config_isu_nameplate_alt_text'] = array(
       '#type' => 'textfield',
       '#title' => t('Wordmark Alt Text'),
       '#description' => t('Alt text for the site\'s wordmark. Defaults to Iowa State University.'),
