@@ -434,7 +434,7 @@ sup { vertical-align: super; }
 figure figcaption { color: #333333; }
 
 img {
-    height: auto;
+    height: auto !important;
     max-width: 100%;
 }
 
