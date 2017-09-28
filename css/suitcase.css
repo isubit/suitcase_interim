@@ -434,13 +434,12 @@ sup { vertical-align: super; }
 figure figcaption { color: #333333; }
 
 img {
-    height: auto;
+    height: auto !important;
     max-width: 100%;
 }
 
 /* Target only images in content */
 .field-name-body img {
-    height: auto !important;
     max-width: calc(100% - 1rem);
     margin: 0.5rem;
 }
