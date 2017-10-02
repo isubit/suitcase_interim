@@ -48,7 +48,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['default_logo'] = array(
       '#type' => 'checkbox',
       '#title' => t('Use the default ISU wordmark'),
-      '#default_value' => theme_get_setting('default_logo', 'suitcase_interim'),
+      '#default_value' => theme_get_setting('default_logo'),
       '#tree' => FALSE,
       '#description' => t('Check here if you want to use the default ISU wordmark.')
     );
@@ -67,7 +67,7 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#type' => 'textfield',
       '#title' => t('Path to custom wordmark'),
       '#description' => t('The path to the file you would like to use as your logo file instead of the ISU wordmark.'),
-      '#default_value' => theme_get_setting('logo_path', 'suitcase_interim'),
+      '#default_value' => theme_get_setting('logo_path'),
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['logo_upload'] = array(
@@ -83,6 +83,14 @@ function suitcase_interim_form_system_theme_settings_alter(&$form, &$form_state)
       '#description' => t('Full URL the Iowa State University wordmark should link to. Defaults to site\'s homepage.'),
       '#default_value' => variable_get('suitcase_interim_config_level_1_url', $GLOBALS['base_url']),
       '#weight' => 2,
+    );
+
+    $form['suitcase_interim_config']['suitcase_interim_config_logo']['settings']['suitcase_interim_config_isu_nameplate_alt_text'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Wordmark Alt Text'),
+      '#description' => t('Alt text for the site\'s wordmark. Defaults to Iowa State University.'),
+      '#default_value' => variable_get('suitcase_interim_config_isu_nameplate_alt_text', 'Iowa State University'),
+      '#weight' => 3,
     );
 
     $form['suitcase_interim_config']['suitcase_interim_config_logo']['suitcase_interim_config_level_2_url'] = array(
@@ -174,6 +182,8 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
 
   variable_set('suitcase_interim_config_isu_nameplate_display', $form_state['values']['suitcase_interim_config_isu_nameplate_display']);
 
+  variable_set('suitcase_interim_config_isu_nameplate_alt_text', $form_state['values']['suitcase_interim_config_isu_nameplate_alt_text']);
+
   variable_set('suitcase_interim_config_show_advanced_settings', $form_state['values']['suitcase_interim_config_show_advanced_settings']);
 
   // Decide which level the site name should be set to
@@ -258,7 +268,7 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
     );
 
     $menu_exists = (bool) db_query_range('SELECT 1 FROM {menu_custom} WHERE menu_name = :menu_name', 0, 1, array(':menu_name' => $menu['menu_name']))->fetchField();
-    $link_exists = db_query_range('SELECT 1 FROM {menu_links} WHERE menu_name = :menu_name', 0, 1, array(':menu_name' => $menu['menu_name']))->fetchField();
+    $link_exists = (bool) db_query_range('SELECT 1 FROM {menu_links} WHERE menu_name = :menu_name', 0, 1, array(':menu_name' => $menu['menu_name']))->fetchField();
 
     if (!$menu_exists && !$link_exists) {
 
