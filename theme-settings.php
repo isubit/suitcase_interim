@@ -209,6 +209,12 @@ function suitcase_interim_config_form_submit($form, &$form_state) {
       $suitcase_interim_block_format = array(
         'format' => 'suitcase_interim_block',
         'name' => 'Suitcase Interim Block',
+        'filters' => array(
+          'filter_tokens' => array(
+            'weight' => 0,
+            'status' => 1,
+          ),
+        ),
       );
       $suitcase_interim_block_format = (object) $suitcase_interim_block_format;
       filter_format_save($suitcase_interim_block_format);
