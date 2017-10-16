@@ -1481,12 +1481,16 @@ in the panel settings */
     flex-grow: 5;
 }
 
-.megapanels-wrapper {
+.megapanels-wrapper:not(.megapanels-wrapper_full_top) {
     margin-top: 1rem;
 }
 
 .megapanels-wrapper ~ .megapanels-wrapper {
     margin-top: 0;
+}
+
+.megapanels-wrapper_full_top {
+    margin-bottom: 1rem;
 }
 
 /* ---------------------------------------- */
