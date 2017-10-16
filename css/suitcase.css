@@ -1481,6 +1481,14 @@ in the panel settings */
     flex-grow: 5;
 }
 
+.megapanels-wrapper {
+    margin-top: 1rem;
+}
+
+.megapanels-wrapper ~ .megapanels-wrapper {
+    margin-top: 0;
+}
+
 /* ---------------------------------------- */
 /* ## BLOCKS 
 /* ---------------------------------------- */
