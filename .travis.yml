@@ -1,7 +1,13 @@
 language: php
 
+# list any PHP version you want to test against
 php:
-  - 5.3
+  - 5.5
+  - 5.6
+  
+matrix:
+  allow_failures:
+    - php: 5.5
 
 mysql:
   database: suitcase_interim
