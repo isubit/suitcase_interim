@@ -2281,6 +2281,22 @@ h2.node-title {
 /* ## CONTENT TYPES
 /* ---------------------------------------- */
 
+h2.node-title {
+    margin-top: 0;
+    /* To steer clear of content type indicators */
+    padding-top: 1.5rem;
+}
+
+.views-row .node-title,
+.views-row .views-field-title .field-content {
+    margin-bottom: 0.75rem;
+    padding-top: 0;
+}
+
+.node .field-name-field-category {
+    margin-bottom: 0.5rem;
+}
+
 /* -------------------- */
 /* ## DATED CONTENT
 /* -------------------- */
