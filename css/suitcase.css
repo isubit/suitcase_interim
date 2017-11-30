@@ -64,13 +64,14 @@
 
     CONTENT TYPES
 
-    01. NEWS
-    02. EVENTS
-    03. PEOPLE
-    04. RESOURCES
-    05. BOOK
-    06. BLOG
-    07. VIDEOS
+    01. DATED CONTENT
+    02. NEWS
+    03. EVENTS
+    04. PEOPLE
+    05. RESOURCES
+    06. BOOK
+    07. BLOG
+    08. VIDEOS
 
     CONTENT EDITING
 
@@ -2281,21 +2282,42 @@ h2.node-title {
 /* ---------------------------------------- */
 
 /* -------------------- */
-/* ## NEWS 
+/* ## DATED CONTENT
 /* -------------------- */
 
-.submitted > span,
-.view-id-news.view-display-id-page .views-field-created {
-    display: inline-block;
+.submitted,
+.view-id-news .views-field-created,
+.view-id-blog .views-field-created {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #dddddd;
 }
 
-.submitted > span > em,
-.view-id-news.view-display-id-page .views-field-created > em {
+.submitted > span,
+.view-id-news .views-field-created,
+.view-id-blog .views-field-created {
+    display: block;
+    color: #555555;
+}
+
+.submitted > span em,
+.view-id-news .views-field-created em,
+.view-id-blog .views-field-created em {
     font-style: normal;
 }
+
+.submitted > span:before,
+.view-id-news .views-field-created:before,
+.view-id-blog .views-field-created:before {
+    content: '\f073';
+    font-family: FontAwesome;
+    margin-right: 0.5rem;
+}
+
+/* -------------------- */
+/* ## NEWS 
+/* -------------------- */
 
 /* -------------------- */
 /* ## EVENTS 
