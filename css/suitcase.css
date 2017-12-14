@@ -2086,7 +2086,11 @@ table.responsive-table,
 /* -------------------- */
 /* No headers (none) */
     
-    .responsive-table.table-none { display: table; min-width: 75%; }
+    .responsive-table.table-none { 
+        display: table; 
+        width: 100% !important; /* Override if table width is set */
+        min-width: 75%; 
+    }
     
     .responsive-table.table-none tr { border-bottom: 3px solid #bbb; }
     .responsive-table.table-none td { 
@@ -2094,13 +2098,21 @@ table.responsive-table,
         border-right: 1px solid #ddd;
         display: block; 
     }
+
+    .responsive-table.table-none td {
+        width: auto !important; /* Override if cell width set */
+    }
     
     .responsive-table.table-none td:last-of-type { border-bottom: none; }
 
 /* -------------------- */
 /* Headers in first row */
     
-    .responsive-table.table-row { display: table; min-width: 75%; }
+    .responsive-table.table-row { 
+        display: table; 
+        width: 100% !important; /* Override if table width is set */
+        min-width: 75%; 
+    }
     
     .responsive-table.table-row th { display: none; }
     
@@ -2114,8 +2126,13 @@ table.responsive-table,
     .responsive-table.table-row td { 
         display: flex; 
         padding: 0;
-            border-bottom: 1px solid #ddd; 
+        border-bottom: 1px solid #ddd; 
         border-right: 1px solid #ddd;
+    }
+
+    .responsive-table.table-row th,
+    .responsive-table.table-row td {
+        width: auto !important; /* Override if cell width set */
     }
     
     .responsive-table.table-row td:last-of-type { border-bottom: none; }
@@ -2139,7 +2156,11 @@ table.responsive-table,
 /* -------------------- */
 /* Headers in first column */
     
-    .responsive-table.table-col { display: table; min-width: 75%; }
+    .responsive-table.table-col { 
+        display: table; 
+        width: 100% !important; /* Override if table width is set */
+        min-width: 75%; 
+    }
     
     .responsive-table.table-col th,
     .responsive-table.table-col td { display: block; }
@@ -2152,9 +2173,14 @@ table.responsive-table,
     }
     
     .responsive-table.table-col td { 
+        display: block;
         border-bottom: 1px solid #ddd; 
         border-right: 1px solid #ddd;
-        display: block; 
+    }
+
+    .responsive-table.table-col th,
+    .responsive-table.table-col td {
+        width: auto !important; /* Override if cell width set */
     }
     
     .responsive-table.table-col td:last-of-type { border-bottom: none; }
@@ -2162,7 +2188,11 @@ table.responsive-table,
 /* -------------------- */
 /* Headers in both first row and first column */
     
-    .responsive-table.table-both { display: table; min-width: 75%; }
+    .responsive-table.table-both { 
+        display: table; 
+        width: 100% !important; /* Override if table width is set */
+        min-width: 75%; 
+    }
     
     .responsive-table.table-both th,
     .responsive-table.table-both td { display: block; }
@@ -2185,6 +2215,11 @@ table.responsive-table,
         padding: 0;
         border-bottom: 1px solid #ddd; 
         border-right: 1px solid #ddd;
+    }
+
+    .responsive-table.table-both th,
+    .responsive-table.table-both td {
+        width: auto !important; /* Override if cell width set */
     }
     
     .responsive-table.table-both td:last-of-type { border-bottom: none; }
