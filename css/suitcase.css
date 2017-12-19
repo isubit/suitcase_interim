@@ -299,11 +299,6 @@ ol,
     margin-bottom: 0;
 }
 
-.node ul > li,
-.node ol > li {
-    margin-bottom: 0.5rem;
-}
-
 /* -------------------- */
 /* Tables */
 
