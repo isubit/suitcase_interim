@@ -1454,6 +1454,13 @@ in the panel settings */
 /* ## MEGAPANELS
 /* -------------------- */
 
+.suitcase_megapanels {
+    /* Mimics the Omega grid framework */
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
 .megapanels-row {
     display: flex;
     flex-wrap: wrap;
