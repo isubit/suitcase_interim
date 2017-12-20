@@ -1485,7 +1485,7 @@ in the panel settings */
 }
 
 .megapanels-pane_grow {
-    flex-grow: 5;
+    flex-grow: 4;
 }
 
 .megapanels-wrapper:not(.megapanels-wrapper_full_top) {
