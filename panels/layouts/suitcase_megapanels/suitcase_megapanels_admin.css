@@ -1,15 +1,7 @@
-.panel-region {
-	margin: 0.5em;
+.megapanels-row {
+  display: flex;
 }
 
-.panel-region h2.label {
-	margin-top: 0.5em !important;
-}
-
-.front-panel-row {
-	display: flex;
-}
-
-.front-panel-row .grid-3 {
-	width: 25%;
+.megapanels-pane {
+  flex: 1 1 100%;
 }

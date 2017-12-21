@@ -1449,89 +1449,14 @@ in the panel settings */
 /* ## MEGAPANELS
 /* -------------------- */
 
-.suitcase_megapanels > .front-panel-row {
-    margin-top: 1rem;
+.suitcase_megapanels {
+    /* Mimics the Omega grid framework */
+    position: relative;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
-.suitcase_megapanels > .front-panel-row ~ .front-panel-row {
-    margin-top: 0;
-}
-
-/* --- IE 9 --- */
-
-    .front-panel-row .panel-panel.grid-3 {
-        display: inline-block;
-        width: calc(25% - 1.25rem);
-        margin: 0 0.5rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
-        border: 1px solid #ddd;
-    }
-
-    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(1) { 
-        width: 100%; 
-    }
-
-    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2),
-    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2) ~ .grid-3 { 
-        width: calc(50% - 1.25rem); 
-    }
-
-    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3),
-    .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3) ~ .grid-3 { 
-        width: calc(33.33% - 1.25rem); 
-    }
-
-    @media (max-width: 900px) {
-        .front-panel-row .panel-panel.grid-3  { 
-            width: calc(50% - 1.25rem); 
-        }
-        
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(1) { 
-            width: 100%; 
-        }
-
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2),
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2) ~ .grid-3 {
-            width: calc(50% - 1.25rem); 
-        }
-
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3),
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3) ~ .grid-3 {
-            width: calc(33.33% - 1.25rem); 
-        }
-    }
-
-    @media (max-width: 700px) {
-        .front-panel-row .panel-panel.grid-3  { 
-            width: 100%; 
-        }
-        
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(1) { 
-            width: 100%; 
-        }
-
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2),
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(2) ~ .grid-3 {
-            width: 100%; 
-        }
-
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3),
-        .front-panel-row .panel-panel.grid-3:first-child:nth-last-child(3) ~ .grid-3 {
-            width: 100%; 
-        }
-    }
-
-
-/* --- Browsers that support flex --- */
-
-.front-panel-full  p{ 
-    margin-right: 1rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem; 
-}
-
-.front-panel-row {
+.megapanels-row {
     display: flex;
     flex-wrap: wrap;
     margin-right: -0.5rem;
@@ -1539,24 +1464,35 @@ in the panel settings */
 }
 
     @media (max-width: 740px) {
-        .front-panel-row {
+        .megapanels-row {
             margin-left: 0.5rem;
             margin-right: 0.5rem;
         }
     }
 
-.front-panel-row .panel-panel.grid-3 {
+.megapanels-pane {
     flex: 1 1 250px;
     min-width: 250px;
-    float: none;
     margin: 0 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
     border: 1px solid #ddd;
 }
 
-.front-panel-row .panel-panel.grid-grow {
-    flex-grow: 5;
+.megapanels-pane_grow {
+    flex-grow: 4;
+}
+
+.megapanels-wrapper:not(.megapanels-wrapper_full_top) {
+    margin-top: 1rem;
+}
+
+.megapanels-wrapper ~ .megapanels-wrapper {
+    margin-top: 0;
+}
+
+.megapanels-wrapper_full_top {
+    margin-bottom: 1rem;
 }
 
 /* ---------------------------------------- */
