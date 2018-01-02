@@ -8,7 +8,7 @@ function suitcase_interim_alpha_preprocess_section(&$vars) {
     $vars['attributes_array']['role'] = 'banner';
   }
   if ($vars['elements']['#section'] == 'content') {
-    $vars['attributes_array']['role'] = 'maincontent';
+    $vars['attributes_array']['role'] = 'main';
   }
   if ($vars['elements']['#section'] == 'footer') {
     $vars['attributes_array']['role'] = 'contentinfo';
