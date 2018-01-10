@@ -1431,7 +1431,7 @@ ul.tabs.secondary img {
     color: #676767;
 }
 
-.panel-panel iframe {
+.panel-pane iframe {
     max-width: 100%;
 }
 
@@ -1493,6 +1493,24 @@ in the panel settings */
 
 .megapanels-wrapper_full_top {
     margin-bottom: 1rem;
+}
+
+@media (max-width: 1139px) and (min-width: 600px) {
+
+    .megapanels-pane:first-child:nth-last-child(4),
+    .megapanels-pane:first-child:nth-last-child(4) ~ .megapanels-pane {
+      width: calc(50% - 1rem);
+      flex: 0 1 auto;
+    } 
+}
+
+@media (max-width: 829px) {
+
+    .megapanels-pane:first-child:nth-last-child(3),
+    .megapanels-pane:first-child:nth-last-child(3) ~ .megapanels-pane {
+      width: calc(50% - 1rem);
+      flex: 0 1 auto;
+    }
 }
 
 /* ---------------------------------------- */
