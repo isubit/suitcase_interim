@@ -813,7 +813,13 @@ input[type=submit].form-submit {
 .luggage-gridrow3 img,
 .luggage-gridrow4 img {
     float: left;
-    padding: 0 1rem 1rem 0;
+    margin: 0 1rem 1rem 0;
+}
+
+.luggage-grid.luggage-grid_no-float .luggage-gridrow img,
+.luggage-grid.luggage-grid_no-float .luggage-gridrow3 img,
+.luggage-grid.luggage-grid_no-float .luggage-gridrow4 img {
+    float: none;
 }
 
 .luggage-gridrow,
@@ -2429,10 +2435,7 @@ td.multi-day .calendar.dayview a {
 
 /* --- Screenshot Preview --- */
 
-.views-field-field-resource-screenshot {
-    margin-right: 1rem;
-    margin-bottom: 0.25rem;
-    float: left;
+.views-field-field-resource-screenshot img {
     border: 1px solid #ddd;
 }
 
