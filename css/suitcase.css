@@ -816,9 +816,9 @@ input[type=submit].form-submit {
     margin: 0 1rem 1rem 0;
 }
 
-.luggage-grid.luggage-grid_no-float .luggage-gridrow img,
-.luggage-grid.luggage-grid_no-float .luggage-gridrow3 img,
-.luggage-grid.luggage-grid_no-float .luggage-gridrow4 img {
+.luggage-grid.luggage-grid-no-float .luggage-gridrow img,
+.luggage-grid.luggage-grid-no-float .luggage-gridrow3 img,
+.luggage-grid.luggage-grid-no-float .luggage-gridrow4 img {
     float: none;
 }
 
