@@ -50,7 +50,7 @@
                     <a href="http://web.iastate.edu/signons">Sign Ons</a>
                     <ul>
                         <li><a href="http://accessplus.iastate.edu/">AccessPlus</a></li>
-                        <li><a href="http://bb.its.iastate.edu/">Blackboard</a></li>
+                        <li><a href="http://canvas.iastate.edu/">Canvas</a></li>
                         <li><a href="http://iastate.box.com/">CyBox</a></li>
                         <li><a href="http://cymail.iastate.edu/">CyMail</a></li>
                         <li><a href="http://outlook.iastate.edu/">Outlook</a></li>
