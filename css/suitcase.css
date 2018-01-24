@@ -1510,7 +1510,7 @@ in the panel settings */
     } 
 }
 
-@media (max-width: 829px) and (min-width: 548px) {
+@media (max-width: 850px) and (min-width: 548px) {
 
     .megapanels-pane:first-child:nth-last-child(3),
     .megapanels-pane:first-child:nth-last-child(3) ~ .megapanels-pane {
