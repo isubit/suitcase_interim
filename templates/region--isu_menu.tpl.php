@@ -6,7 +6,7 @@
             <h2 class="element-invisible">ISU Index Menu</h2>
 
             <ul id="isu-index-menu" class="sm" data-sm-options="{ subIndicatorsText: '', subMenusMinWidth: '', subMenusMaxWidth: '', subIndicatorsPos: 'append' }">
-                <li><a href="https://iastate.edu" title="Iowa State University Home Page">iastate.edu</a></li>
+                <li><a href="https://www.iastate.edu" title="Iowa State University Home Page">iastate.edu</a></li>
                 <li>
                     <a href="https://www.iastate.edu/index/A">Index</a>
                     <ul>
