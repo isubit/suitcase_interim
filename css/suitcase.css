@@ -904,19 +904,17 @@ input[type=submit].form-submit {
     transition: all .25s ease;
 }
 
+#isu-menu-nav .sm a:hover,
+#isu-menu-nav .sm a:focus,
+#isu-menu-nav .sm a:active,
+#isu-menu-nav .sm a.highlighted,
 #isu-menu-nav .sm ul a:hover,
 #isu-menu-nav .sm ul a:focus,
 #isu-menu-nav .sm ul a:active,
 #isu-menu-nav .sm ul a.highlighted {
     color: #fff;
-    background: #777;
+    background: #666;
     transition: all 0.25s ease;
-}
-
-#isu-menu-nav .sm ul a:focus,
-#isu-menu-nav .sm ul a:active,
-#isu-menu-nav .sm ul a.highlighted {
-    border: 2px #F1BE48;
 }
 
 #isu-menu-nav #isu-index-menu { float: left; }
