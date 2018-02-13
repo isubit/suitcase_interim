@@ -1,7 +1,7 @@
 <div<?php print $attributes; ?>>
     <div<?php print $content_attributes; ?>>
       <?php print $content; ?>
-        <nav id="isu-menu-nav" class="navigation" role="navigation">
+        <nav id="isu-menu-nav" class="navigation">
 
             <h2 class="element-invisible">ISU Index Menu</h2>
 

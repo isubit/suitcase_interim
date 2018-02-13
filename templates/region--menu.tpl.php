@@ -3,7 +3,7 @@
     <?php print $content; ?>
 
     <?php if ($main_menu_smartmenu): ?>
-    <nav id="main-menu-nav" class="navigation" role="navigation">
+    <nav id="main-menu-nav" class="navigation" >
 
       <h2 class="element-invisible">Main menu</h2>
 
