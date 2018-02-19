@@ -273,8 +273,10 @@ a:hover {
 #section-content .pane-menu-menu-social a.external:after,
 #section-content .block-menu-social a:after,
 #section-content .view-resources a.external:after,
-#section-content .bibio-entry a.external:after {
+#section-content .bibio-entry a.external:after,
+#section-content .flex-caption a.external:after {
     content: '';
+    display: none;
 }
 
 /* -------------------- */
@@ -1373,8 +1375,16 @@ ul.tabs.secondary img {
     border: 1px solid #bbb;
 }
 
-.flex-caption a {
+.flex-caption a,
+.flex-caption a > p {
+    color: #cc0000;
     text-decoration: none;
+}
+
+.flex-caption a:hover,
+.flex-caption a:hover > p {
+    color: #0062a0;
+    text-decoration: underline;
 }
 
 .flex-caption p {
