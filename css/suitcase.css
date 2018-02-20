@@ -1788,7 +1788,7 @@ aside.region {
     margin: 0 0 1rem 0;
 }
 
-.item-list ul li a {
+.item-list ul > li > a {
     display: block;
 }
 
