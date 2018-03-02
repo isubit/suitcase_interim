@@ -1485,7 +1485,7 @@ in the panel settings */
     }
 
 .megapanels-pane {
-    flex: 1 1 0px;
+    flex: 1 1 250px;
     min-width: 250px;
     margin: 0 0.5rem;
     margin-bottom: 1rem;
@@ -1509,7 +1509,17 @@ in the panel settings */
     margin-bottom: 1rem;
 }
 
-@media (max-width: 1139px) and (min-width: 600px) {
+@media (min-width: 1141px) {
+
+    .megapanels-pane:first-child:nth-last-child(4),
+    .megapanels-pane:first-child:nth-last-child(4) ~ .megapanels-pane {
+      width: calc(25% - 1rem);
+      flex: 0 1 auto;
+      min-width: 0;
+    } 
+}
+
+@media (max-width: 1140px) and (min-width: 600px) {
 
     .megapanels-pane:first-child:nth-last-child(4),
     .megapanels-pane:first-child:nth-last-child(4) ~ .megapanels-pane {
@@ -1518,7 +1528,7 @@ in the panel settings */
     } 
 }
 
-@media (max-width: 850px) and (min-width: 548px) {
+@media (max-width: 1000px) and (min-width: 548px) {
 
     .megapanels-pane:first-child:nth-last-child(3),
     .megapanels-pane:first-child:nth-last-child(3) ~ .megapanels-pane {
