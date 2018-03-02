@@ -363,7 +363,7 @@ function suitcase_interim_menu_link__menu_social($variables) {
   }
 
   if (!empty($font_awesome_icon)) {
-    $element['#title'] = '<i class="fa ' . $font_awesome_icon . '" aria-hidden="true"></i><span class="social-title"> ' . $element['#title'] . '</span>';
+    $element['#title'] = '<span class="fa ' . $font_awesome_icon . '" aria-hidden="true"></span><span class="social-title"> ' . $element['#title'] . '</span>';
     $element['#localized_options']['html'] = TRUE;
   }
 
