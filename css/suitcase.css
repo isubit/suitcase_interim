@@ -626,10 +626,30 @@ input[type=submit].form-submit {
     border: 1px solid #ddd;
 }
 
-
 .media-heading { 
     margin-top: 0; 
     margin-bottom: 0;
+}
+
+/* Media Card Layout */
+
+.media.media_card {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: flex-start;
+}
+
+.media.media_card .media-heading {
+    margin-bottom: 1rem;
+}
+
+.people_media-card_heading {
+    font-size: 1.25rem;
+}
+
+.people_media-card_position {
+    font-size: 1rem;
+    color: #676767;
 }
 
 /* -------------------- */
