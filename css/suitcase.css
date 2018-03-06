@@ -552,9 +552,10 @@ input[type=submit].form-submit {
 /* -------------------- */
 
 /* -------------------- */
-/* Pagination */
+/* Pagination & Site Index */
 
-.item-list .pager {
+.item-list .pager,
+.site-index ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -564,7 +565,12 @@ input[type=submit].form-submit {
     border-radius: 0;
 }
 
-.pager li {
+.site-index ul {
+    justify-content: flex-start;
+}
+
+.pager li,
+.site-index li {
     border: 0;
 }
 
@@ -573,11 +579,13 @@ input[type=submit].form-submit {
     position: static;
 }
 
-.pager li.pager-next {
+.pager li.pager-next,
+.site-index li:last-of-type {
     border-left: 0;
 }
 
-.pager li.first {
+.pager li.first,
+.site-index li:first-of-type a {
     border-left: 1px solid #ddd;
 }
 
@@ -587,11 +595,13 @@ input[type=submit].form-submit {
 .pager li.pager-current,
 .pager li.pager-next a,
 .pager li.pager-last a,
-.pager li.pager-ellipsis {
+.pager li.pager-ellipsis,
+.site-index li a {
     width: auto;
     margin-bottom: 0.5rem;
     color: #333;
     font-size: 0.95rem;
+    text-decoration: none;
     padding: 10px 16px;
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -599,8 +609,14 @@ input[type=submit].form-submit {
     background: #fff;
 }
 
+.site-index li a {
+    padding: 8px 12px;
+}
+
 .pager li.pager-current,
-.pager li a:hover {
+.pager li a:hover,
+.site-index li a.active,
+.site-index li a:hover {
     background: #ddd;
 }
 
