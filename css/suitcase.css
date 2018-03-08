@@ -2339,9 +2339,32 @@ h2.node-title {
     color: #616161;
 }
 
+.calendar-calendar td .inner div.day a {
+    color: #467CA0;
+}
+
+.calendar-calendar td {
+    color: #676767;
+}
+
 .calendar-calendar td.empty {
     /* Overrides green from module */
-    color: #616161;
+    color: #444444;
+}
+
+.calendar-calendar th.days,
+.calendar-calendar div.date-nav a, .calendar-calendar div.date-nav h3 {
+    color: #000000;
+}
+
+table td.mini.today a {
+    font-weight: bold;
+}
+
+.calendar-calendar tr td.today, 
+.calendar-calendar tr.odd td.today, 
+.calendar-calendar tr.even td.today {
+    background-color: #d8e7ee;
 }
 
 /* --- Month View --- */
@@ -2365,6 +2388,13 @@ h2.node-title {
 .calendar-calendar .month-view .full td.multi-day div.monthview, 
 .calendar-calendar .week-view .full td.multi-day div.weekview, 
 .calendar-calendar .day-view .full td.multi-day div.dayview {
+    background: #006ba6;
+}
+
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, 
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, 
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
     background: #006ba6;
 }
 
