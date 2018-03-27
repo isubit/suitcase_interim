@@ -22,7 +22,9 @@
   
   <div class="clearfix">
     <?php if (render($content['links'])): ?>
-      <nav class="links node-links clearfix"><?php print render($content['links']); ?></nav>
+      <div role="toolbar" class="links node-links clearfix">
+        <?php print render($content['links']); ?>
+      </div>
     <?php endif; ?>
 
     <?php print render($content['comments']); ?>
