@@ -3,9 +3,9 @@
     <?php print $content; ?>
 
     <?php if ($main_menu_smartmenu): ?>
-    <nav id="main-menu-nav" class="navigation" role="navigation">
+    <nav id="main-menu-nav" class="navigation" aria-labelledby="main-menu-label">
 
-      <h2 class="element-invisible">Main menu</h2>
+      <h2 id="main-menu-label" class="element-invisible">Main menu</h2>
 
       <!-- Mobile menu toggle button (hamburger/x icon) -->
       <input id="main-menu-state" class="sm-menu-state" type="checkbox" />
