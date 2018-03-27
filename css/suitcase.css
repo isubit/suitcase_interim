@@ -273,8 +273,10 @@ a:hover {
 #section-content .pane-menu-menu-social a.external:after,
 #section-content .block-menu-social a:after,
 #section-content .view-resources a.external:after,
-#section-content .bibio-entry a.external:after {
+#section-content .bibio-entry a.external:after,
+#section-content .flex-caption a.external:after {
     content: '';
+    display: none;
 }
 
 /* -------------------- */
@@ -624,10 +626,30 @@ input[type=submit].form-submit {
     border: 1px solid #ddd;
 }
 
-
 .media-heading { 
     margin-top: 0; 
     margin-bottom: 0;
+}
+
+/* Media Card Layout */
+
+.media.media_card {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    align-items: flex-start;
+}
+
+.media.media_card .media-heading {
+    margin-bottom: 1rem;
+}
+
+.people_media-card_heading {
+    font-size: 1.25rem;
+}
+
+.people_media-card_position {
+    font-size: 1rem;
+    color: #676767;
 }
 
 /* -------------------- */
@@ -904,19 +926,17 @@ input[type=submit].form-submit {
     transition: all .25s ease;
 }
 
+#isu-menu-nav .sm a:hover,
+#isu-menu-nav .sm a:focus,
+#isu-menu-nav .sm a:active,
+#isu-menu-nav .sm a.highlighted,
 #isu-menu-nav .sm ul a:hover,
 #isu-menu-nav .sm ul a:focus,
 #isu-menu-nav .sm ul a:active,
 #isu-menu-nav .sm ul a.highlighted {
     color: #fff;
-    background: #777;
+    background: #666;
     transition: all 0.25s ease;
-}
-
-#isu-menu-nav .sm ul a:focus,
-#isu-menu-nav .sm ul a:active,
-#isu-menu-nav .sm ul a.highlighted {
-    border: 2px #F1BE48;
 }
 
 #isu-menu-nav #isu-index-menu { float: left; }
@@ -1375,8 +1395,16 @@ ul.tabs.secondary img {
     border: 1px solid #bbb;
 }
 
-.flex-caption a {
+.flex-caption a,
+.flex-caption a > p {
+    color: #cc0000;
     text-decoration: none;
+}
+
+.flex-caption a:hover,
+.flex-caption a:hover > p {
+    color: #0062a0;
+    text-decoration: underline;
 }
 
 .flex-caption p {
@@ -1501,7 +1529,17 @@ in the panel settings */
     margin-bottom: 1rem;
 }
 
-@media (max-width: 1139px) and (min-width: 600px) {
+@media (min-width: 1141px) {
+
+    .megapanels-pane:first-child:nth-last-child(4),
+    .megapanels-pane:first-child:nth-last-child(4) ~ .megapanels-pane {
+      width: calc(25% - 1rem);
+      flex: 0 1 auto;
+      min-width: 0;
+    } 
+}
+
+@media (max-width: 1140px) and (min-width: 600px) {
 
     .megapanels-pane:first-child:nth-last-child(4),
     .megapanels-pane:first-child:nth-last-child(4) ~ .megapanels-pane {
@@ -1510,7 +1548,7 @@ in the panel settings */
     } 
 }
 
-@media (max-width: 829px) and (min-width: 548px) {
+@media (max-width: 1000px) and (min-width: 548px) {
 
     .megapanels-pane:first-child:nth-last-child(3),
     .megapanels-pane:first-child:nth-last-child(3) ~ .megapanels-pane {
@@ -1780,7 +1818,7 @@ aside.region {
     margin: 0 0 1rem 0;
 }
 
-.item-list ul li a {
+.item-list ul > li > a {
     display: block;
 }
 
@@ -2301,9 +2339,32 @@ h2.node-title {
     color: #616161;
 }
 
+.calendar-calendar td .inner div.day a {
+    color: #467CA0;
+}
+
+.calendar-calendar td {
+    color: #676767;
+}
+
 .calendar-calendar td.empty {
     /* Overrides green from module */
-    color: #616161;
+    color: #444444;
+}
+
+.calendar-calendar th.days,
+.calendar-calendar div.date-nav a, .calendar-calendar div.date-nav h3 {
+    color: #000000;
+}
+
+table td.mini.today a {
+    font-weight: bold;
+}
+
+.calendar-calendar tr td.today, 
+.calendar-calendar tr.odd td.today, 
+.calendar-calendar tr.even td.today {
+    background-color: #d8e7ee;
 }
 
 /* --- Month View --- */
@@ -2327,6 +2388,13 @@ h2.node-title {
 .calendar-calendar .month-view .full td.multi-day div.monthview, 
 .calendar-calendar .week-view .full td.multi-day div.weekview, 
 .calendar-calendar .day-view .full td.multi-day div.dayview {
+    background: #006ba6;
+}
+
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .continues, 
+.calendar-calendar .month-view .full td.multi-day .inner .monthview .cutoff,
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .continues, 
+.calendar-calendar .week-view .full td.multi-day .inner .weekview .cutoff {
     background: #006ba6;
 }
 

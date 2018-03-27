@@ -58,7 +58,4 @@ function suitcase_interim_alpha_preprocess_region(&$vars) {
     unset($vars['elements']['#grid']);
     unset($vars['elements']['#grid_container']);
   }
-  elseif (strpos($vars['region'], 'sidebar') === 0) {
-    $vars['attributes_array']['role'] = 'complementary';
-  }
 }

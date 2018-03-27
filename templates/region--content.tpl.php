@@ -1,4 +1,4 @@
-<main role="main"<?php print $attributes; ?>>
+<main <?php print $attributes; ?>>
   <div<?php print $content_attributes; ?>>
     <a id="main-content"></a>
     <?php print render($title_prefix); ?>
