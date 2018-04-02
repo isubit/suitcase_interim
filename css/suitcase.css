@@ -2114,8 +2114,6 @@ table.responsive-table,
         border-bottom: 3px solid #bbb;
     }
     
-    .responsive-table.table-row tr:first-of-type { border-bottom: 0; }
-    
     .responsive-table.table-row td { 
         display: flex; 
         padding: 0;
