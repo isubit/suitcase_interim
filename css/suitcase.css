@@ -1445,6 +1445,9 @@ ul.tabs.secondary img {
 
 .pane-title {
     margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #676767;
 }
 
 .pane-content .views-row:not(.views-row-last) {
@@ -1493,8 +1496,8 @@ in the panel settings */
 .megapanels-row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -0.5rem;
-    margin-left: -0.5rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
 }
 
     @media (max-width: 740px) {
@@ -1510,7 +1513,6 @@ in the panel settings */
     margin: 0 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    border: 1px solid #ddd;
 }
 
 .megapanels-pane_grow {
