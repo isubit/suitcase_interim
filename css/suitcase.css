@@ -1482,6 +1482,17 @@ in the panel settings */
     overflow-y: scroll;
 }
 
+/* --- Panel Styles --- */
+/* Add to individual Panel regions via the Panels UI.
+ * Requires the suitcase_interim_panel_styles module.
+ */
+
+.pane-bordered {
+    margin: 0 -0.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+}
+
 /* -------------------- */
 /* ## MEGAPANELS
 /* -------------------- */
