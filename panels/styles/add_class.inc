@@ -15,11 +15,14 @@ $plugin = array(
  * Settings form callback.
  */
 function add_class_style_settings_form($settings) {
+
+  $form = array();
+
   $form['class'] = array(
     '#type' => 'textfield',
     '#title' => t('CSS Classes'),
     '#description' => t('Enter CSS classes for this style. Separate multiple classes by spaces.'),
-    '#default_value' => (isset($form['class'])) ? $form['class'] : '',
+    '#default_value' => (isset($settings['class'])) ? $settings['class'] : '',
   );
 
   return $form;
