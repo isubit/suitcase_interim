@@ -489,7 +489,8 @@ figure.image.floated-right img {
 /* -------------------- */
 /* Forms */
 
-input[type=text] {
+input[type=text],
+input[type=password] {
     height: auto;
     max-width: 100%;
     padding: 0.5rem;
