@@ -14,7 +14,7 @@
     <?php endif; ?>
 
     <?php if (!empty($content['media_body'])): ?>
-      <div class="media-body">
+      <div class="media-content">
         <?php print $content['media_body']; ?>
       </div>
     <?php endif; ?>
