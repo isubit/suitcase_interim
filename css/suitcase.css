@@ -2348,6 +2348,12 @@ table.responsive-table,
         font-weight: 500;
         background: #eee;
     }
+
+    /* --- Word Breaks --- */
+
+    .responsive-table {
+        word-break: break-word;
+    }
 }
 
 /* --- Views Tables - Overflow --- */
