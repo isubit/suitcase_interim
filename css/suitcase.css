@@ -1451,6 +1451,104 @@ ul.tabs.secondary img {
     line-height: 20px;
 }
 
+/* ---------------------- */
+/* ## NUMBERED FLEXSLIDER */
+/* ---------------------- */
+/* Add flexslider-numbered to the Pane or View to grab
+ * these brutal overrides to both flexslider, interim, and 
+ * luggage announcements
+ */
+
+.flexslider-numbered .flexslider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.flexslider-numbered .slides {
+  width: 100%;
+}
+
+.flexslider-numbered .views-field.views-field-field-announcement-image {
+  margin-bottom: 0;
+}
+
+.flexslider-numbered .flex-control-paging {
+  width: auto;
+  height: 2.5rem;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-top: -2.5rem;
+}
+
+.flexslider-numbered .flex-pauseplay {
+  height: 2.5rem;
+  margin-top: -2.5rem;
+  left: 0;
+  bottom: 0;
+}
+
+.flexslider-numbered .flex-control-paging li {
+  height: 2.5rem;
+  margin: 0;
+  display: block;
+}
+
+.flexslider-numbered .flex-control-paging li a,
+.flexslider-numbered .flex-pause,
+.flexslider-numbered .flex-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 1;
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  border-radius: 0;
+  box-shadow: none;
+  text-indent: 0;
+}
+
+.flexslider-numbered .flex-pause,
+.flexslider-numbered .flex-play {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.flexslider-numbered .flex-pause:before,
+.flexslider-numbered .flex-play:before {
+  margin-top: 0.75rem;
+  margin-left: .9rem;
+  text-indent: 0;
+  font-size: 1rem;
+  float: left;
+}
+
+.flexslider-numbered .flex-control-paging li a.flex-active,
+.flexslider-numbered .flex-control-paging li a:hover,
+.flexslider-numbered .flex-pause:hover,
+.flexslider-numbered .flex-play:hover {
+  background-color: #ffffff;
+}
+
+.flexslider-numbered .flex-caption {
+  bottom: 4rem;
+}
+
+@media (max-width: 739px) {
+  .flexslider-numbered .flexslider .flex-caption { position: absolute; }
+}
+
 /* ---------------------------------------- */
 /* ## PANELS 
 /* ---------------------------------------- */
