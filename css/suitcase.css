@@ -14,9 +14,10 @@
         g. Forms
     02. COMPONENTS
         a. Pagination
-        b. Media Card
-        c. Icon Menus
-        d. Social Menus
+        b. Card
+        c. Media Card
+        d. Icon Menus
+        e. Social Menus
     03. UTILITY
     04. GRID
     05. HEADER
@@ -617,6 +618,38 @@ input[type=submit].form-submit {
 }
 
 /* -------------------- */
+/* Card */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card.card-borders {
+    border: 1px solid #ddd;
+}
+
+.card-body {
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+.card-image img {
+    width: 100%;
+    margin: 0 !important;
+}
+
+.card-image a {
+    display: block;
+}
+
+.card-footer {
+    border-top: 1px solid #ddd;
+    padding: 1rem;
+}
+
+/* -------------------- */
 /* Media Card */
 
 .media {
@@ -856,6 +889,13 @@ input[type=submit].form-submit {
 .luggage-grid.luggage-grid-no-float .luggage-gridrow3 img,
 .luggage-grid.luggage-grid-no-float .luggage-gridrow4 img {
     float: none;
+}
+
+.luggage-grid.luggage-grid-no-borders .luggage-gridrow,
+.luggage-grid.luggage-grid-no-borders .luggage-gridrow3,
+.luggage-grid.luggage-grid-no-borders .luggage-gridrow4 {
+    padding: 0;
+    border: 0;
 }
 
 .luggage-gridrow,
