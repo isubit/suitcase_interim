@@ -632,6 +632,11 @@ input[type=submit].form-submit {
 
 .card-body {
     flex-grow: 1;
+    padding: 1rem 0 0;
+}
+
+.card-borders .card-body,
+.card-borders .card-header {
     padding: 1rem;
 }
 
@@ -871,6 +876,11 @@ input[type=submit].form-submit {
 .luggage-grid .view-content {
     display: flex;
     flex-flow: wrap;
+}
+
+.luggage-grid .views-row {
+    padding-bottom: 1rem !important;
+    border-bottom: 0 !important;
 }
 
 .luggage-grid .view-content > h3 {

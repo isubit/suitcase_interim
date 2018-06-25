@@ -1,5 +1,9 @@
 <<?php print $layout_wrapper; print $layout_attributes; ?> class="card <?php print $classes;?> clearfix">
 
+  <?php if (isset($title_suffix['contextual_links'])): ?>
+  <?php print render($title_suffix['contextual_links']); ?>
+  <?php endif; ?>
+
   <?php if (!empty($content['card_header'])): ?>
     <div class="card-header">
       <?php print $content['card_header']; ?>
