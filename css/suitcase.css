@@ -489,7 +489,19 @@ figure.image.floated-right img {
 /* -------------------- */
 /* Forms */
 
-input[type=text] {
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
     height: auto;
     max-width: 100%;
     padding: 0.5rem;
@@ -552,9 +564,10 @@ input[type=submit].form-submit {
 /* -------------------- */
 
 /* -------------------- */
-/* Pagination */
+/* Pagination & Site Index */
 
-.item-list .pager {
+.item-list .pager,
+.site-index ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -564,7 +577,12 @@ input[type=submit].form-submit {
     border-radius: 0;
 }
 
-.pager li {
+.site-index ul {
+    justify-content: flex-start;
+}
+
+.pager li,
+.site-index li {
     border: 0;
 }
 
@@ -573,11 +591,13 @@ input[type=submit].form-submit {
     position: static;
 }
 
-.pager li.pager-next {
+.pager li.pager-next,
+.site-index li:last-of-type {
     border-left: 0;
 }
 
-.pager li.first {
+.pager li.first,
+.site-index li:first-of-type a {
     border-left: 1px solid #ddd;
 }
 
@@ -587,11 +607,13 @@ input[type=submit].form-submit {
 .pager li.pager-current,
 .pager li.pager-next a,
 .pager li.pager-last a,
-.pager li.pager-ellipsis {
+.pager li.pager-ellipsis,
+.site-index li a {
     width: auto;
     margin-bottom: 0.5rem;
     color: #333;
     font-size: 0.95rem;
+    text-decoration: none;
     padding: 10px 16px;
     border-top: 1px solid #ddd;
     border-right: 1px solid #ddd;
@@ -599,8 +621,14 @@ input[type=submit].form-submit {
     background: #fff;
 }
 
+.site-index li a {
+    padding: 8px 12px;
+}
+
 .pager li.pager-current,
-.pager li a:hover {
+.pager li a:hover,
+.site-index li a.active,
+.site-index li a:hover {
     background: #ddd;
 }
 
@@ -634,6 +662,8 @@ input[type=submit].form-submit {
 /* Media Card Layout */
 
 .media.media_card {
+    display: flex;
+    margin-right: 1rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
     align-items: flex-start;
@@ -1439,12 +1469,113 @@ ul.tabs.secondary img {
     line-height: 20px;
 }
 
+/* ---------------------- */
+/* ## NUMBERED FLEXSLIDER */
+/* ---------------------- */
+/* Add flexslider-numbered to the Pane or View to grab
+ * these brutal overrides to both flexslider, interim, and 
+ * luggage announcements
+ */
+
+.flexslider-numbered .flexslider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.flexslider-numbered .slides {
+  width: 100%;
+}
+
+.flexslider-numbered .views-field.views-field-field-announcement-image {
+  margin-bottom: 0;
+}
+
+.flexslider-numbered .flex-control-paging {
+  width: auto;
+  height: 2.5rem;
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-top: -2.5rem;
+}
+
+.flexslider-numbered .flex-pauseplay {
+  height: 2.5rem;
+  margin-top: -2.5rem;
+  left: 0;
+  bottom: 0;
+}
+
+.flexslider-numbered .flex-control-paging li {
+  height: 2.5rem;
+  margin: 0;
+  display: block;
+}
+
+.flexslider-numbered .flex-control-paging li a,
+.flexslider-numbered .flex-pause,
+.flexslider-numbered .flex-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+  line-height: 1;
+  font-size: 1rem;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  border-radius: 0;
+  box-shadow: none;
+  text-indent: 0;
+}
+
+.flexslider-numbered .flex-pause,
+.flexslider-numbered .flex-play {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+
+.flexslider-numbered .flex-pause:before,
+.flexslider-numbered .flex-play:before {
+  margin-top: 0.75rem;
+  margin-left: .9rem;
+  text-indent: 0;
+  font-size: 1rem;
+  float: left;
+}
+
+.flexslider-numbered .flex-control-paging li a.flex-active,
+.flexslider-numbered .flex-control-paging li a:hover,
+.flexslider-numbered .flex-pause:hover,
+.flexslider-numbered .flex-play:hover {
+  background-color: #ffffff;
+}
+
+.flexslider-numbered .flex-caption {
+  bottom: 4rem;
+}
+
+@media (max-width: 739px) {
+  .flexslider-numbered .flexslider .flex-caption { position: absolute; }
+}
+
 /* ---------------------------------------- */
 /* ## PANELS 
 /* ---------------------------------------- */
 
 .pane-title {
     margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #676767;
 }
 
 .pane-content .views-row:not(.views-row-last) {
@@ -1469,14 +1600,22 @@ ul.tabs.secondary img {
     max-width: 100%;
 }
 
-/* .panel-pane-overflow must be applied
-in the panel settings */ 
+
+/* --- Panel Styles --- */
+/* Add to individual Panel regions or panes via the Panels UI.
+ */
 
 .panel-pane-overflow .pane-content, 
 .pane-twitter-block-1 .pane-content,
 .pane-views-instagrams-block .pane-content {
-    height: 350px;
+    height: 500px;
     overflow-y: scroll;
+}
+
+.panel-pane-bordered {
+    margin: 0 -0.5rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
 }
 
 /* -------------------- */
@@ -1493,8 +1632,8 @@ in the panel settings */
 .megapanels-row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -0.5rem;
-    margin-left: -0.5rem;
+    margin-right: -1rem;
+    margin-left: -1rem;
 }
 
     @media (max-width: 740px) {
@@ -1510,7 +1649,6 @@ in the panel settings */
     margin: 0 0.5rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    border: 1px solid #ddd;
 }
 
 .megapanels-pane_grow {
@@ -2114,8 +2252,6 @@ table.responsive-table,
         border-bottom: 3px solid #bbb;
     }
     
-    .responsive-table.table-row tr:first-of-type { border-bottom: 0; }
-    
     .responsive-table.table-row td { 
         display: flex; 
         padding: 0;
@@ -2229,6 +2365,12 @@ table.responsive-table,
         padding: 0.5rem 0.75rem;
         font-weight: 500;
         background: #eee;
+    }
+
+    /* --- Word Breaks --- */
+
+    .responsive-table {
+        word-break: break-word;
     }
 }
 
