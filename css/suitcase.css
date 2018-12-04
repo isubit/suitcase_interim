@@ -2830,6 +2830,12 @@ td.views-field-field-resource-screenshot img {
     min-width: 100px;
 }
 
+.player {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
 /* ---------------------------------------- */
 /* ## CONTENT EDITING
 /* ---------------------------------------- */
