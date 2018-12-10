@@ -541,12 +541,29 @@ input[type=submit].form-submit {
     padding-right: 0.5rem;
 }
 
-/* Views Forms */
+/* -------------------- */
+/* ## EXPOSED FILTERS
+/* -------------------- */
 /* Overrides styles from views.css */
 
 .views-exposed-widgets {
     display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: 0;
+    margin: 0 1em 1em 0;
+}
+
+.form-required {
+    color: #cc0000;
+}
+
+.form-radios label {
+    font-weight: normal
 }
 
 .views-exposed-widgets .form-submit {
@@ -554,10 +571,15 @@ input[type=submit].form-submit {
     margin-top: 0;
 }
 
-.form-required {
-    color: #cc0000;
+/* Date Filter */
+.views-exposed-widget.views-widget-filter-date_filter {
+    flex-shrink: 0;
 }
 
+.date-padding {
+    display: flex;
+    align-items: center;
+}
 
 /* -------------------- */
 /* ## COMPONENTS 
