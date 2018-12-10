@@ -559,13 +559,12 @@ input[type=submit].form-submit {
     margin: 0 1em 1em 0;
 }
 
-.views-exposed-form .form-item,
-.views-exposed-form .form-submit {
-    margin-top: 0.5rem;
-}
-
 .form-required {
     color: #cc0000;
+}
+
+.views-exposed-form label {
+    margin-bottom: 0.25rem;
 }
 
 .form-radios label {
@@ -580,6 +579,7 @@ input[type=submit].form-submit {
 /* Select Lists */
 .form-type-select select {
     margin-top: 0;
+    margin-bottom: 0.5rem;
 }
 
 /* Date Filter */
@@ -590,7 +590,6 @@ input[type=submit].form-submit {
 .views-exposed-form .container-inline-date .date-padding {
     display: flex;
     align-items: center;
-    margin-top: 0.5rem;
 }
 
 /* -------------------- */
