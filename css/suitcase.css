@@ -12,26 +12,27 @@
         e. Misc Typography
         f. Figures & Images
         g. Forms
-    02. COMPONENTS
+    02. EXPOSED FILTERS
+    03. COMPONENTS
         a. Pagination
         b. Media Card
         c. Icon Menus
         d. Social Menus
-    03. UTILITY
-    04. GRID
-    05. HEADER
+    04. UTILITY
+    05. GRID
+    06. HEADER
         a. ISU Menu Bar
         b. Site Name
         c. Header Search
         d. Header Search Menu
-    06. MENU
+    07. MENU
         a. Sticky Menu
-    07. SECONDARY MENU
-    08. BREADCRUMBS
-    09. ALERTS
-    10. TABS
+    08. SECONDARY MENU
+    09. BREADCRUMBS
+    10. ALERTS
+    11. TABS
         a. Secondary Tabs
-    11. FOOTER
+    12. FOOTER
 
     HOME
 
@@ -571,14 +572,20 @@ input[type=submit].form-submit {
     margin-top: 0;
 }
 
+/* Select Lists */
+.form-type-select select {
+    margin-top: 0;
+}
+
 /* Date Filter */
 .views-exposed-widget.views-widget-filter-date_filter {
     flex-shrink: 0;
 }
 
-.date-padding {
+.views-exposed-form .container-inline-date .date-padding {
     display: flex;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
 /* -------------------- */
