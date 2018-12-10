@@ -559,6 +559,11 @@ input[type=submit].form-submit {
     margin: 0 1em 1em 0;
 }
 
+.views-exposed-form .form-item,
+.views-exposed-form .form-submit {
+    margin-top: 0.5rem;
+}
+
 .form-required {
     color: #cc0000;
 }
