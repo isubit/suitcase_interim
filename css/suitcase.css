@@ -1701,6 +1701,20 @@ ul.tabs.secondary img {
     margin-bottom: 1rem;
 }
 
+.megapanels-wrapper_full_top,
+.megapanels-wrapper_full_bottom {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 740px) {
+    .megapanels-wrapper_full_top,
+    .megapanels-wrapper_full_bottom {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
+
 @media (min-width: 1141px) {
 
     .megapanels-pane:first-child:nth-last-child(4),
