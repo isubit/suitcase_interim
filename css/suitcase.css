@@ -1743,6 +1743,54 @@ ul.tabs.secondary img {
     }
 }
 
+/* --- Full Width Option --- */
+/* Add these classes to the Panel Page in General Settings. Supplement
+ * with the CSS code field.
+ */
+
+.megapanels_full-width .zone-content {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+}
+
+.megapanels_full-width .grid-12 {
+    width: 100% !important;
+    margin: 0;
+}
+
+.megapanels_full-width.megapanels_content-contained .megapanels-row {
+    border: 5px solid black;
+}
+
+/* Mimic container-12 */
+
+@media (max-width: 740px) {
+    .megapanels_full-width.megapanels_content-contained .megapanels-row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media (min-width: 740px) {
+    .megapanels_full-width.megapanels_content-contained .megapanels-row {
+        width: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }   
+}
+
+@media (min-width: 1200px) {
+    .megapanels_full-width.megapanels_content-contained .megapanels-row {
+        max-width: 1200px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.megapanels_full-width.megapanels_content-contained .suitcase_megapanels {
+    margin: 0;
+}
+
 /* ---------------------------------------- */
 /* ## BLOCKS 
 /* ---------------------------------------- */
