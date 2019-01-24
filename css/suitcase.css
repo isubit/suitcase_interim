@@ -2950,6 +2950,16 @@ td.views-field-field-resource-screenshot img {
     height: 100%;
 }
 
+/* Strong override for luggage_video.css */
+
+.field-item .embedded-video {
+    position: static !important;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: auto;
+    overflow: visible;
+}
+
 /* ---------------------------------------- */
 /* ## CONTENT EDITING
 /* ---------------------------------------- */
