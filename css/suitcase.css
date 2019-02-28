@@ -209,6 +209,28 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+/* --- Content Buttons --- */
+/* Add the link-button class to a link in CKEditor to style it like
+ * a button. Remember, the link-button needs to be added to the list of 
+ * allowed classes in the Text Formatter.
+ */
+ 
+a.link-button {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  background: #cc0000;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+a.link-button:hover {
+  background: #333333;
+}
+
+
 /* --- Read More --- */
 
 .read-more {
