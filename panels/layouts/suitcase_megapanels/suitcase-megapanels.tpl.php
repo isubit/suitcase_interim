@@ -131,7 +131,7 @@
 	</div>
 
 	<?php if (!empty($content['bottom_full'])): ?>
-		<div class="megapanels_wrapper">
+		<div class="megapanels_wrapper megapanels-wrapper_full_top">
 			<div class="megapanels-full megapanels-full_bottom">
 				<div class="megapanels-pane_full">
 					<?php print $content['bottom_full']; ?>

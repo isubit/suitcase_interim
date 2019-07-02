@@ -12,26 +12,27 @@
         e. Misc Typography
         f. Figures & Images
         g. Forms
-    02. COMPONENTS
+    02. EXPOSED FILTERS
+    03. COMPONENTS
         a. Pagination
         b. Media Card
         c. Icon Menus
         d. Social Menus
-    03. UTILITY
-    04. GRID
-    05. HEADER
+    04. UTILITY
+    05. GRID
+    06. HEADER
         a. ISU Menu Bar
         b. Site Name
         c. Header Search
         d. Header Search Menu
-    06. MENU
+    07. MENU
         a. Sticky Menu
-    07. SECONDARY MENU
-    08. BREADCRUMBS
-    09. ALERTS
-    10. TABS
+    08. SECONDARY MENU
+    09. BREADCRUMBS
+    10. ALERTS
+    11. TABS
         a. Secondary Tabs
-    11. FOOTER
+    12. FOOTER
 
     HOME
 
@@ -207,6 +208,28 @@ a:hover {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
+
+/* --- Content Buttons --- */
+/* Add the link-button class to a link in CKEditor to style it like
+ * a button. Remember, the link-button needs to be added to the list of 
+ * allowed classes in the Text Formatter.
+ */
+ 
+a.link-button {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+  background: #cc0000;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+a.link-button:hover {
+  background: #333333;
+}
+
 
 /* --- Read More --- */
 
@@ -503,8 +526,9 @@ input[type="time"],
 input[type="url"],
 input[type="week"] {
     height: auto;
+    min-height: 2.25rem;
     max-width: 100%;
-    padding: 0.5rem;
+    padding: 0.525rem;
     border: 1px solid #ddd;
     border-radius: 2px;
 }
@@ -541,23 +565,55 @@ input[type=submit].form-submit {
     padding-right: 0.5rem;
 }
 
-/* Views Forms */
+/* -------------------- */
+/* ## EXPOSED FILTERS
+/* -------------------- */
 /* Overrides styles from views.css */
 
 .views-exposed-widgets {
     display: flex;
-    align-items: flex-end;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-.views-exposed-widgets .form-submit {
-    height: 2.25rem; 
-    margin-top: 0;
+.views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: 0;
+    margin: 0 1em 1em 0;
 }
 
 .form-required {
     color: #cc0000;
 }
 
+.views-exposed-form label {
+    margin-bottom: 0.25rem;
+}
+
+.form-radios label {
+    font-weight: normal
+}
+
+.views-exposed-form .views-exposed-widget .form-submit {
+    height: 2.25rem; 
+    margin-top: 1.75rem;
+}
+
+/* Select Lists */
+.form-type-select select {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Date Filter */
+.views-exposed-widget.views-widget-filter-date_filter {
+    flex-shrink: 0;
+}
+
+.views-exposed-form .container-inline-date .date-padding {
+    display: flex;
+    align-items: center;
+}
 
 /* -------------------- */
 /* ## COMPONENTS 
@@ -1667,6 +1723,20 @@ ul.tabs.secondary img {
     margin-bottom: 1rem;
 }
 
+.megapanels-wrapper_full_top,
+.megapanels-wrapper_full_bottom {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+@media (max-width: 740px) {
+    .megapanels-wrapper_full_top,
+    .megapanels-wrapper_full_bottom {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
+
 @media (min-width: 1141px) {
 
     .megapanels-pane:first-child:nth-last-child(4),
@@ -1693,6 +1763,65 @@ ul.tabs.secondary img {
       width: calc(50% - 1rem);
       flex: 0 1 auto;
     }
+}
+
+/* --- Full Width Option --- */
+/* Add these classes to the Panel Page in General Settings. Supplement
+ * with the CSS code field.
+ */
+
+.megapanels_full-width .zone-content {
+    max-width: 100% !important;
+    width: 100%;
+    margin: 0;
+}
+
+.megapanels_full-width .grid-12 {
+    width: 100% !important;
+    margin: 0;
+}
+
+.megapanels_full-width .megapanels-wrapper_full_top,
+.megapanels_full-width .megapanels-wrapper_full_bottom {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.megapanels_full-width.megapanels_content-contained .megapanels-row {
+    
+}
+
+/* Mimic container-12 */
+
+@media (max-width: 740px) {
+    .megapanels_full-width.megapanels_content-contained .megapanels-row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+@media (min-width: 740px) {
+    .megapanels_full-width.megapanels_content-contained .megapanels-row {
+        width: 92%;
+        margin-left: 4%;
+        margin-right: 4%;
+    }   
+}
+
+@media (min-width: 1200px) {
+    .megapanels_full-width.megapanels_content-contained .megapanels-row {
+        width: 92%;
+        max-width: calc(1200px + 2rem);
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+.megapanels_full-width.megapanels_content-contained .suitcase_megapanels {
+    margin: 0;
+}
+
+.megapanels_full-width.megapanels_content-contained .megapanels-pane {
+  margin: 0;
 }
 
 /* ---------------------------------------- */
@@ -2828,6 +2957,29 @@ td.views-field-field-resource-screenshot img {
 
 .views-table .views-field-field-video-video img {
     min-width: 100px;
+}
+
+.player {
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.player iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Strong override for luggage_video.css */
+
+.field-item .embedded-video {
+    position: static !important;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: auto;
+    overflow: visible;
 }
 
 /* ---------------------------------------- */
