@@ -25,18 +25,21 @@ structure and assign classes.
 	var bothHeader = $(table.has('tr:nth-of-type(1) th:nth-of-type(2)').has('tr:nth-of-type(2) th:nth-of-type(1)'));
 	bothHeader.attr('class', 'table-both');
 	
+	/* --- All Responsive Tables --- */
+	table.addClass('responsive-table');
+
 	/* --- Colspan or Rowspan --- */
 	var tdColFreeze = $(table.has('td[colspan]'));
 	var thColFreeze = $(table.has('th[colspan]'));
 	var tdRowFreeze = $(table.has('td[rowspan]'));
 	var thRowFreeze = $(table.has('th[rowspan]'));
-	tdColFreeze.attr('class', 'table-freeze');
-	thColFreeze.attr('class', 'table-freeze');
-	tdRowFreeze.attr('class', 'table-freeze');
-	thRowFreeze.attr('class', 'table-freeze');
+	tdColFreeze.attr('class', 'table-freeze').removeClass('responsive-table');
+	thColFreeze.attr('class', 'table-freeze').removeClass('responsive-table');
+	tdRowFreeze.attr('class', 'table-freeze').removeClass('responsive-table');
+	thRowFreeze.attr('class', 'table-freeze').removeClass('responsive-table');
 
-	/* --- All Responsive Tables --- */
-	table.addClass('responsive-table');
+	
+
 
 /* --------------------- 
 Now apply any jQuery needed
