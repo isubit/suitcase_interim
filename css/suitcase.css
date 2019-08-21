@@ -451,7 +451,37 @@ sup { vertical-align: super; }
 /* -------------------- */
 /* Figures & Images */
 
-figure figcaption { color: #333333; }
+figure {
+  display: table;
+}
+
+figure > br {
+  display: none;
+}
+
+figure img {
+  display: block;
+  max-width: 100% !important;
+  margin: 0 !important;
+}
+
+figcaption {
+  display: table-caption;
+  max-width: none;
+  caption-side: bottom;
+  padding: 0.5rem;
+  color: #333333;
+  font-size: 0.9rem;
+  background: #eeeeee;
+}
+
+figure[style*="float:left"] {
+  margin: 0 1rem 0 0;
+}
+
+figure[style*="float:right"] {
+  margin: 0 0 0 1rem;
+}
 
 img {
     height: auto !important;
