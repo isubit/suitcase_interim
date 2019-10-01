@@ -287,8 +287,14 @@ a.link-button:hover {
     font-family: 'FontAwesome';
     font-size: 0.75em;
     display: inline-block;
+    width: 2rem;
+    margin-right: -2rem; /* Same as width. Helps prevent wrapping */
     margin-left: 4px;
     vertical-align: text-top;
+}
+
+#section-content a.external p {
+    display: inherit;
 }
 
 /* Exceptions */
