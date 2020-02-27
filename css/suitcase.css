@@ -1562,6 +1562,7 @@ ul.tabs.secondary img {
 }
 
 .flexslider-numbered .flex-pauseplay {
+  display: inline-flex;
   height: 2.5rem;
   margin-top: -2.5rem;
   left: 0;
