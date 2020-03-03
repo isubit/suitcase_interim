@@ -807,6 +807,11 @@ input[type=submit].form-submit {
     color: #f77737;
 }
 
+.block-menu-social  .menu a:hover .fa-linkedin-square,
+.pane-menu-menu-social  .menu a:hover .fa-linkedin-square {
+    color: #2867B2;
+}
+
 /* -------------------- */
 /* Image link blocks */
 
