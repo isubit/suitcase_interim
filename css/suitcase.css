@@ -282,29 +282,26 @@ a.link-button:hover {
 
 /* --- External Links --- */
 
-#section-content a.external:after {
-    content: '\f08e';
-    font-family: 'FontAwesome';
-    font-size: 0.75em;
-    display: inline-block;
-    width: 2rem;
-    margin-right: -2rem; /* Same as width. Helps prevent wrapping */
-    margin-left: 4px;
-    vertical-align: text-top;
+/* Class provided by suitcase_external_links.js */
+.external {
+  display: inline-flex;
 }
 
-#section-content a.external p {
-    display: inherit;
+/* Element provided in suitcase_external_links.js */
+.external-icon {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-left: 4px;
+  vertical-align: text-top;
 }
 
 /* Exceptions */
 
-#section-content .pane-menu-menu-social a.external:after,
-#section-content .block-menu-social a:after,
-#section-content .view-resources a.external:after,
-#section-content .bibio-entry a.external:after,
-#section-content .flex-caption a.external:after {
-    content: '';
+#section-content .pane-menu-menu-social .external-icon,
+#section-content .block-menu-social .external-icon,
+#section-content .view-resources .external-icon,
+#section-content .bibio-entry .external-icon,
+#section-content .flexslider .external-icon {
     display: none;
 }
 
