@@ -281,28 +281,31 @@ a.link-button:hover {
     }
 
 /* --- External Links --- */
+/* .external class and .external-icon span provided by
+ * suitcase_external_links.js */
 
-/* Class provided by suitcase_external_links.js */
-.external {
+#section-content table .external {
   display: inline-flex;
 }
 
-/* Element provided in suitcase_external_links.js */
-.external-icon {
+#section-content .external-icon {
   display: inline-block;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   margin-left: 4px;
   vertical-align: text-top;
 }
 
 /* Exceptions */
 
-#section-content .pane-menu-menu-social .external-icon,
-#section-content .block-menu-social .external-icon,
-#section-content .view-resources .external-icon,
-#section-content .bibio-entry .external-icon,
-#section-content .flexslider .external-icon {
-    display: none;
+.pane-menu-menu-social .external-icon,
+.block-menu-social .external-icon,
+.view-resources .external-icon,
+.bibio-entry .external-icon,
+.flexslider .external-icon,
+.bean-hero .external-icon,
+.bean-card .external-icon,
+.bean-adventure .external-icon {
+    display: none !important;
 }
 
 /* -------------------- */
