@@ -2757,6 +2757,11 @@ td.multi-day .calendar.dayview a {
     clear: both;
 }
 
+.node-people .field-type-taxonomy-term-reference .field-label {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /* -------------------- */
 /* ## RESOURCES 
 /* -------------------- */
