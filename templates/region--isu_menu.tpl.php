@@ -48,14 +48,6 @@
                 <li><a href="https://web.iastate.edu/safety/">Safety</a></li>
                 <li data-sm-reverse="true">
                     <a href="https://web.iastate.edu/signons">Sign Ons</a>
-                    <ul>
-                        <li><a href="https://accessplus.iastate.edu/">AccessPlus</a></li>
-                        <li><a href="https://canvas.iastate.edu/">Canvas</a></li>
-                        <li><a href="https://iastate.box.com/">CyBox</a></li>
-                        <li><a href="http://cymail.iastate.edu/">CyMail</a></li>
-                        <li><a href="https://outlook.iastate.edu/">Outlook</a></li>
-                        <li><a href="https://web.iastate.edu/signons">More Sign Ons...</a></li>
-                    </ul>
                 </li>
             </ul>
 
