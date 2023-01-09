@@ -47,7 +47,7 @@
                 <li><a href="https://www.fpm.iastate.edu/maps/">Maps</a></li>
                 <li><a href="https://web.iastate.edu/safety/">Safety</a></li>
                 <li data-sm-reverse="true">
-                    <a href="https://web.iastate.edu/signons">Sign Ons</a>
+                    <a href="https://login.iastate.edu">Sign Ons</a>
             </li>
             </ul>
 
