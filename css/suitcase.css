@@ -95,7 +95,7 @@ html,body {
 body {
     font-size: 1rem;
     line-height: 1.5;
-    font-family: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -webkit-osx-font-smoothing: greyscale;
     background: #f3f3f3;
@@ -136,7 +136,7 @@ li.leaf {
 
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 1em;
-    font-family: 'Nimbus Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 500;
     letter-spacing: 0;
     line-height: 1.35;
